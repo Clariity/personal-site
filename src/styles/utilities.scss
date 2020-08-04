@@ -1,0 +1,117 @@
+.flex {
+  display: flex;
+}
+
+.fill-width {
+  width: 100%;
+}
+.fill-height {
+  height: 100%;
+}
+
+.block {
+  display: block;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+.align-horizontal {
+  align-items: center;
+}
+
+.align-vertical {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.lato {
+  font-family: Lato;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.line {
+  border-bottom: 4px solid;
+}
+
+.line-sm {
+  border-bottom: 3px solid;
+  max-width: 100%;
+  opacity: 0.5;
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.grow-lg {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.shadow {
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.03);
+}
+
+.hover:hover {
+  color: #ef6461;
+  cursor: pointer;
+}
+
+.border-radius {
+  border-radius: 8px;
+}
+
+.border-radius-sm {
+  border-radius: 3px;
+}
+
+.rotate-icon {
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+}
+
+.rotate-light:hover {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.rotate-dark:hover {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+@media only screen and (max-width: 991px) {
+  .hide-on-small {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .hide-on-big {
+    display: none;
+  }
+}

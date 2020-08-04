@@ -1,0 +1,62 @@
+//files;
+@import "./layout";
+@import "./navigation";
+@import "./utilities";
+@import "./projects";
+@import "./margin_padding";
+@import "./colors";
+
+//60b0f4
+//Monoton
+// “Created my free logo at LogoMakr.com”
+html {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: calc(100vh-38px);
+  margin: 0;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  //   sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: lighter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.app {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 1vmin);
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+body.dark-mode {
+  background-color: #1a1919;
+  color: rgb(190, 190, 190);
+  transition: background-color 0.3s ease;
+}
+
+.legal {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
