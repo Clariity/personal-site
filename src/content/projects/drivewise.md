@@ -1,6 +1,27 @@
-# Hello, _world_!
+# DriveWise
 
-Below is an example of JSX embedded in Markdown.
+## What is DriveWise?
 
-**Try and change
-the background color!**
+[DriveWise](https://clariity.github.io/DriveWise) is a route planning tool that identifies current and upcoming disruptions to your journey. It displays these disruptions in easy to understand colour coded markers and informs you when they will be taking place.
+
+The application helps you to plan any upcoming journeys in advance and know if you will need to prepare to find an alternative route. You can see how your journey may be disrupted and can view any alternative routes provided by the tool.
+
+Other tools such as Google Maps offer great driving services and inform you of current traffic conditions. However, they do not additionally inform you of upcoming roadworks alongside any current roadworks or traffic incidents.
+
+Whilst the services used (Highways England and Transport for London) do offer their own tools that display this information, DriveWise brings all the information together in one useful tool that is easy to understand and use. Additionally, DriveWise provides routing capabilities, date filtering and a user friendly interface to interact with the data.
+
+<img src="/images/drivewise-route.png" alt="drive wise route" style="width: 80vw; max-width: 1000px; margin: auto; display: block;"/>
+
+## What did I do?
+
+I had complete creative ownership of the application and designed how it would look and flow for the user. I implemented the basic functionality to ensure the application did as was needed and then I worked with another contributing developer to extend it's functionality and efficiency.
+
+In total I made 28 commits to the application's repository.
+
+## What did I learn?
+
+During this project I worked with mapping libraries and API's (such as leaflet.js and Mapbox) for the first time. These are great tools to learn to use as they will likely be helpful in later projects. The developer I worked with also had a lot more development experience than myself and I learnt a lot from looking at how they coded and implemented features.
+
+## Check it out!
+
+[Click here to go to DriveWise!](https://clariity.github.io/DriveWise)
