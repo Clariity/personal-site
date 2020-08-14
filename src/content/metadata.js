@@ -5,7 +5,7 @@ export const metadata = [
     description: "A place for short, sharp, UX rants with authors in mind.",
     date: "24-07-2020",
     imageName: "designrant.png",
-    roles: ["Developer"]
+    roles: ["Developer"],
   },
   {
     name: "drivewise",
@@ -14,6 +14,6 @@ export const metadata = [
       "A route planning appliction that warns you of upcoming roadworks as well as current incidents and delays.",
     date: "22-07-2020",
     imageName: "drivewise-hero.png",
-    roles: ["Owner", "Developer"]
+    roles: ["Owner", "Developer"],
   },
 ];

@@ -12,7 +12,7 @@ function Navigation() {
 
   return (
     <div className="navigation row">
-      <div className="col-xs-4 text-align-left flex align-horizontal">
+      <div className="col-xs-4 pad-4-l text-align-left flex align-horizontal">
         <Link className="flex" to="/">
           <img height="80px" src={"/logo.png"} alt="Site Logo" />
         </Link>

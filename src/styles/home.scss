@@ -1,0 +1,67 @@
+.welcome-message {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.home-image {
+  width: 80vw;
+  max-width: 800px;
+}
+
+.see-all-icon {
+  margin-top: auto;
+  margin-left: 5px;
+  font-size: calc(12px + 1vmin);
+}
+
+.see-all-projects {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.lottie-animation,
+.lottie-animation-2 {
+  position: absolute;
+  z-index: -1;
+  width: 50vw;
+}
+
+.lottie-animation-2 {
+  right: 0;
+}
+
+.slide-button {
+  font-family: "Quicksand", sans-serif;
+  font-size: calc(10px + 1vmin);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, #60b0f4 50%, #5097d4 50%);
+  padding: 15px;
+  -webkit-transition: background-position 0.3s;
+  -moz-transition: background-position 0.3s;
+  transition: background-position 0.3s;
+}
+
+.slide-button:hover {
+  cursor: pointer;
+  background-position: -100% 0;
+}
+
+.slide-button:hover:before {
+  transform: translate3d(50%, 50%, 0) scale3d(15, 15, 15);
+}
+
+.welcome-container {
+  width: 100%;
+}
+
+.welcome {
+  max-width: 1800px;
+  margin: auto;
+}
+
+.slide {
+  background-color: unset !important;
+}
