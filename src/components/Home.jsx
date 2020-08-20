@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Lottie from "react-lottie";
 import LottieData from "../media/7393-fireworks.json";
 import ProjectCard from "./ProjectCard";
@@ -20,6 +20,9 @@ function Home() {
   const [yearsAlive, setYearsAlive] = useState(ageDate);
   const [previousAge, setPreviousAge] = useState(yearsAlive);
   const [showFireworks, setShowFireworks] = useState(false);
+
+  const welcomeRef = useRef();
+  const projectsRef = useRef();
 
   // Seconds alive and years alive intervals
   useEffect(() => {
@@ -58,6 +61,9 @@ function Home() {
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
+  // Add to code snippets
+  const scrollTo = (ref) => window.scrollTo(0, ref.current.offsetTop);
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -95,7 +101,12 @@ function Home() {
           onClick={() => console.log("Do something")}
         />
       </div>
-      <div className="row margin-10-t welcome-container">
+      <div className="col-xs-12 margin-5-t bounce">
+        <i className="material-icons arrow-icon" onClick={() => scrollTo(welcomeRef)}>
+          keyboard_arrow_down
+        </i>
+      </div>
+      <div className="row margin-5-t welcome-container" ref={welcomeRef}>
         <div className="col-xs-12 row welcome">
           <div className="col-xs-12 col-md-4 pad-4">
             <h1>Welcome</h1>
@@ -105,13 +116,24 @@ function Home() {
               </p>
             </Link>
             <p>
+              The site is a fun project for me to consistently work on and expand as I continue to
+              learn.
+            </p>
+            <p>
               Parts of this site are dedicated to selling myself and showing off what I've made and
               accomplished.
             </p>
-            <p>Other parts are just for fun and hacking around.</p>
+            <p>Other parts are just for fun and trying out new things.</p>
             <p>
-              The site is a fun project for me to consistently work on and keep adding features to
-              as I continue to learn.
+              Have a good look around. If you find any issues or have any suggestions then please{" "}
+              <a
+                href="https://twitter.com/messages/compose?recipient_id=1283026029452365826&text=Topic%3A%20ryangregory.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                let me know
+              </a>
+              .
             </p>
           </div>
           <div className="col-xs-12 col-md-8 pad-4">
@@ -128,19 +150,43 @@ function Home() {
               showLegends={false}
             >
               <div className="pad-3">
-                <img src="images/bbq.svg" alt="bbq" />
+                <h1>About Ryan</h1>
+                <img src="images/about-me.svg" alt="about me" />
               </div>
               <div className="pad-3">
-                <img src="images/credits.svg" alt="bbq" />
+                <h1>Blog</h1>
+                <img src="images/blog.svg" alt="blog" />
               </div>
               <div className="pad-3">
-                <img src="images/design.svg" alt="bbq" />
+                <h1>Projects</h1>
+                <img src="images/projects.svg" alt="projects" />
+              </div>
+              <div className="pad-3">
+                <h1>Code Snippets</h1>
+                <img src="images/code.svg" alt="code snippets" />
+              </div>
+              <div className="pad-3">
+                <h1>Stats</h1>
+                <img src="images/stats.svg" alt="stats" />
+              </div>
+              <div className="pad-3">
+                <h1>Site Plans</h1>
+                <img src="images/kanban.svg" alt="kanban" />
+              </div>
+              <div className="pad-3">
+                <h1>Credits</h1>
+                <img src="images/credits.svg" alt="credits" />
               </div>
             </Carousel>
           </div>
+          <div className="col-xs-12 margin-5-t bounce">
+            <i className="material-icons arrow-icon" onClick={() => scrollTo(projectsRef)}>
+              keyboard_arrow_down
+            </i>
+          </div>
         </div>
       </div>
-      <div className="col-xs-12 row projects-container">
+      <div className="col-xs-12 row projects-container" ref={projectsRef}>
         <div className="col-xs-6 text-align-left pad-3-l">
           <h2>Latest Projects</h2>
         </div>

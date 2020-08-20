@@ -9,6 +9,7 @@ import Navigation from "./Navigation";
 // On scroll reveal navbar, scrolls down to projects
 // Add custom blue scrollbar
 // Add a did you know section in code snippets for stuff like "did you know you only had to do npm i package-name as --save was no longer needed after 1.??"
+// migrate projects and blog to MDX
 
 function App() {
   return (
