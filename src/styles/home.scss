@@ -32,6 +32,10 @@
   right: 0;
 }
 
+.carousel img {
+  pointer-events: unset !important;
+}
+
 .slide-button {
   font-family: "Quicksand", sans-serif;
   font-size: calc(10px + 1vmin);

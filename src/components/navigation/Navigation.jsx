@@ -18,30 +18,18 @@ function Navigation() {
         </Link>
       </div>
       <div
-        className={`col-xs-8 text-align-right navigation-align ${
-          darkMode.value && "dark-hover"
-        }`}
+        className={`col-xs-8 text-align-right navigation-align ${darkMode.value && "dark-hover"}`}
       >
         {menuOpen ? (
-          <i
-            className="material-icons navigation-button"
-            onClick={() => setMenuOpen(false)}
-          >
+          <i className="material-icons navigation-button" onClick={() => setMenuOpen(false)}>
             expand_less
           </i>
         ) : (
-          <i
-            className="material-icons navigation-button"
-            onClick={() => setMenuOpen(true)}
-          >
+          <i className="material-icons navigation-button" onClick={() => setMenuOpen(true)}>
             menu
           </i>
         )}
-        <DarkModeToggle
-          onChange={darkMode.toggle}
-          checked={darkMode.value}
-          size={80}
-        />
+        <DarkModeToggle onChange={darkMode.toggle} checked={darkMode.value} size={80} />
       </div>
       <div className="col-xs-12 pad-0-lr">
         <SmoothCollapse expanded={menuOpen}>

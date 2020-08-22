@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/global.scss";
 
-import Routes from "./Routes";
+import Routes from "./navigation/Routes";
 import { BrowserRouter as Router } from "react-router-dom";
-import Navigation from "./Navigation";
+import Navigation from "./navigation/Navigation";
 
 // Add a did you know section in code snippets for stuff like "did you know you only had to do npm i package-name as --save was no longer needed after 1.??"
 // migrate projects and blog to MDX (Do on separate branch)

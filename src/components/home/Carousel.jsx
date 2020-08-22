@@ -1,5 +1,8 @@
 import React from "react";
+
 import { Carousel } from "react-responsive-carousel";
+import { Link } from "react-router-dom";
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function CarouselLinks() {
@@ -17,34 +20,34 @@ function CarouselLinks() {
         showStatus={false}
         showLegends={false}
       >
-        <div className="pad-3">
+        <Link className="pad-3" to="/about">
           <h1>About Ryan</h1>
           <img src="images/about-me.svg" alt="about me" />
-        </div>
-        <div className="pad-3">
+        </Link>
+        <Link className="pad-3" to="/blog">
           <h1>Blog</h1>
           <img src="images/blog.svg" alt="blog" />
-        </div>
-        <div className="pad-3">
+        </Link>
+        <Link className="pad-3" to="/projects">
           <h1>Projects</h1>
           <img src="images/projects.svg" alt="projects" />
-        </div>
-        <div className="pad-3">
+        </Link>
+        <Link className="pad-3" to="/code">
           <h1>Code Snippets</h1>
           <img src="images/code.svg" alt="code snippets" />
-        </div>
-        <div className="pad-3">
+        </Link>
+        <Link className="pad-3" to="/stats">
           <h1>Stats</h1>
           <img src="images/stats.svg" alt="stats" />
-        </div>
-        <div className="pad-3">
+        </Link>
+        <Link className="pad-3" to="/plans">
           <h1>Site Plans</h1>
           <img src="images/kanban.svg" alt="kanban" />
-        </div>
-        <div className="pad-3">
+        </Link>
+        <Link className="pad-3" to="/credits">
           <h1>Credits</h1>
           <img src="images/credits.svg" alt="credits" />
-        </div>
+        </Link>
       </Carousel>
     </div>
   );

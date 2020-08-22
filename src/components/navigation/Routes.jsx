@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Home from "./home/Home";
+import Home from "../home/Home";
 import NotFound from "./NotFound";
-import Project from "./Project";
-import Projects from "./Projects";
+import Project from "../projects/Project";
+import Projects from "../projects/Projects";
 
 export default () => {
   return (

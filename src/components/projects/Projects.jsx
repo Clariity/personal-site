@@ -1,7 +1,7 @@
 import React from "react";
-import SEO from "./Seo";
-import { metadata } from "../content/metadata";
-import ProjectCard from "./ProjectCard";
+import SEO from "../Seo";
+import { metadata } from "../../content/metadata";
+import ProjectCard from "../ProjectCard";
 import { useLocation, useParams, Link } from "react-router-dom";
 
 function Projects() {
@@ -10,9 +10,7 @@ function Projects() {
   return (
     <div className="row fill-width">
       <SEO title="Projects" />
-      <h1 className="col-xs-12 margin-1-t text-align-left projects-title">
-        Projects
-      </h1>
+      <h1 className="col-xs-12 margin-1-t text-align-left projects-title">Projects</h1>
       <div className="col-xs-12 row projects-container">
         {location.pathname.includes("projects/roles/") && (
           <div className="col-xs-12 text-align-left projects-tag-return margin-2-b ">
@@ -24,11 +22,7 @@ function Projects() {
         )}
         {metadata.map((project, index) => {
           if (location.pathname.includes("projects/roles/"))
-            return (
-              project.roles.includes(role) && (
-                <ProjectCard key={index} project={project} />
-              )
-            );
+            return project.roles.includes(role) && <ProjectCard key={index} project={project} />;
           else return <ProjectCard key={index} project={project} />;
         })}
       </div>

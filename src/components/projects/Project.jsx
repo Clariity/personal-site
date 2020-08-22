@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Loading from "./Loading";
+import Loading from "../Loading";
 import ReactMarkdown from "react-markdown";
-import SEO from "./Seo";
+import SEO from "../Seo";
 import { useParams } from "react-router-dom";
 
 function Project() {
@@ -11,7 +11,7 @@ function Project() {
 
   useEffect(() => {
     async function fetchFile() {
-      const file = await import(`../content/projects/${projectName}.md`);
+      const file = await import(`../../content/projects/${projectName}.md`);
       const response = await fetch(file.default);
       const text = await response.text();
       setMarkdownContent(text);
@@ -22,7 +22,7 @@ function Project() {
 
   return (
     <div className="row">
-      <SEO title="home" />
+      <SEO title={projectName} />
       {!loading ? (
         <div className="markdown">
           <div className="col-xs-12">
@@ -32,11 +32,7 @@ function Project() {
               className="project-hero-image"
             />
           </div>
-          <ReactMarkdown
-            source={markdownContent}
-            escapeHtml={false}
-            className="col-xs-12"
-          />
+          <ReactMarkdown source={markdownContent} escapeHtml={false} className="col-xs-12" />
         </div>
       ) : (
         <Loading />
