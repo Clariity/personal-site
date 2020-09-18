@@ -2,7 +2,12 @@ import React from "react";
 
 function BounceArrow({ scrollRef }) {
   // Add to code snippets
-  const scrollTo = (ref) => window.scrollTo(0, ref.current.offsetTop);
+  const scrollTo = (ref) =>
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
 
   return (
     <div className="col-xs-12 margin-5-t bounce">

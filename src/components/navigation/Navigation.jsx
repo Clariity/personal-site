@@ -14,7 +14,7 @@ function Navigation() {
     <div className="navigation row">
       <div className="col-xs-4 pad-4-l text-align-left flex align-horizontal">
         <Link className="flex" to="/">
-          <img height="80px" src={"/logo.png"} alt="Site Logo" />
+          <img className="site-logo" src={"/logo.svg"} alt="Site Logo" />
         </Link>
       </div>
       <div

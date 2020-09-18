@@ -5,8 +5,30 @@
 .fill-width {
   width: 100%;
 }
+.fill-screen {
+  width: 100vw;
+}
 .fill-height {
   height: 100%;
+}
+
+.font-10 {
+  font-size: 10rem;
+}
+@media (max-width: 500px) {
+  .font-10 {
+    font-size: 5rem;
+  }
+}
+
+.max-1400 {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.max-800 {
+  max-width: 800px;
+  margin: auto;
 }
 
 .block {
@@ -25,6 +47,10 @@
   justify-content: center;
 }
 
+.align-self-center {
+  align-self: center;
+}
+
 .text-align-right {
   text-align: right;
 }
@@ -35,6 +61,10 @@
 
 .text-align-left {
   text-align: left;
+}
+
+.text-align-justify {
+  text-align: justify;
 }
 
 .lato {
@@ -53,6 +83,10 @@
   border-bottom: 3px solid;
   max-width: 100%;
   opacity: 0.5;
+}
+
+.border-thin {
+  border: black 1px solid;
 }
 
 .grow {
@@ -107,6 +141,10 @@
 @media only screen and (max-width: 991px) {
   .hide-on-small {
     display: none;
+  }
+  .reduce-on-small {
+    width: 70vw;
+    margin-left: calc(15vw - 33px);
   }
 }
 

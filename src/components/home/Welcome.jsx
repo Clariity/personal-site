@@ -6,7 +6,7 @@ function Welcome() {
   return (
     <div className="col-xs-12 col-md-4 pad-4">
       <h1>Welcome</h1>
-      <Link className="is-black-always" to="/about">
+      <Link className="is-black-always" to="/about#experience">
         <p className="slide-button">
           For skills and experience, click here to head straight to the good stuff
         </p>
