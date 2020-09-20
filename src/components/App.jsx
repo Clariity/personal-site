@@ -4,6 +4,7 @@ import "../styles/global.scss";
 import Routes from "./navigation/Routes";
 import { BrowserRouter as Router } from "react-router-dom";
 import Navigation from "./navigation/Navigation";
+import Footer from "./footer/Footer";
 
 // Need to lazy load images or have a placeholder as they are causing page to jump while loading
 // Add a did you know section in code snippets for stuff like "did you know you only had to do npm i package-name as --save was no longer needed after 1.??"
@@ -12,8 +13,9 @@ import Navigation from "./navigation/Navigation";
 // Blog Post: Useful VSCode extensions (Join Lines, Ipsum Lorem, Prettier, Live Share, Formatting Toggle) and shortcuts div.thisisaclassname + tab (play a gif to show this)
 // PC Blog: Airflow/pressure, 3-pin cpu fan vs 4pin, aio mounting orientation, thermal paste application, fan sizes (120,140,240,360 ect)
 // migrate to Next.js (Do on separate branch)
+// integrate firebase - on both api server and here
 // Change links to blue colour
-// SSR
+// api server
 // Cookie Notice if required
 // Quotes in random order on 40 page so its not the same every time
 // Footer
@@ -26,7 +28,10 @@ function App() {
     <div className="app">
       <Router>
         <Navigation />
-        <Routes />
+        <div className="fill-height-screen">
+          <Routes />
+        </div>
+        <Footer />
       </Router>
     </div>
   );

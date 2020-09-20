@@ -43,6 +43,14 @@
   width: 75%;
 }
 
+.more-link {
+  color: #60b0f4 !important;
+}
+.more-link:hover {
+  color: #60aff475 !important;
+  cursor: pointer;
+}
+
 @keyframes grow-bar {
   0% {
     width: 0;
