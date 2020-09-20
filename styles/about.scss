@@ -1,0 +1,79 @@
+.about-avatar {
+  border-radius: 50%;
+  width: 50vw;
+  max-width: 400px;
+}
+
+.vertical-timeline::before {
+  background: #60b0f4 !important;
+}
+
+.vertical-timeline-element-date {
+  color: #f5f5f5;
+  font-size: calc(10px + 1vmin) !important;
+}
+
+.vertical-timeline-element-content > p {
+  font-size: calc(10px + 0.8vmin) !important;
+}
+
+.image-icon {
+  border-radius: 50%;
+  height: 60px;
+}
+
+.education-bar-0 {
+  -webkit-animation: shrink-bar 0.6s forwards;
+  -moz-animation: shrink-bar 0.6s forwards;
+  animation: shrink-bar 0.6s forwards;
+}
+.education-bar {
+  -webkit-animation: grow-bar 1.2s forwards;
+  -moz-animation: grow-bar 1.2s forwards;
+  animation: grow-bar 1.2s forwards;
+}
+
+.education-bar-bg {
+  background-color: #60aff475;
+  border-radius: 5px;
+  padding: 0px;
+}
+
+.width-75 {
+  width: 75%;
+}
+
+.more-link {
+  color: #60b0f4 !important;
+}
+.more-link:hover {
+  color: #60aff475 !important;
+  cursor: pointer;
+}
+
+@keyframes grow-bar {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes shrink-bar {
+  100% {
+    width: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .order-1 {
+    order: 1;
+  }
+  .order-2 {
+    order: 2;
+  }
+}
+
+@media (max-width: 1169px) {
+  .image-icon {
+    height: 40px;
+  }
+}

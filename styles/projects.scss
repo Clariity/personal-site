@@ -1,0 +1,93 @@
+.projects-title {
+  padding-left: 24px;
+}
+
+.projects-tag-return {
+  padding-left: 16px;
+}
+
+.underline {
+  position: relative;
+  display: flex;
+  width: max-content;
+  padding-bottom: 5px;
+}
+
+.return-icon {
+  margin-top: auto;
+  margin-right: 5px;
+  font-size: calc(10px + 1vmin);
+}
+
+.underline:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  display: block;
+  right: 0;
+  bottom: 0;
+  background: #60b0f4;
+  transition: width 0.2s ease;
+  -webkit-transition: width 0.2s ease;
+}
+.underline:hover:after {
+  width: 100%;
+  left: 0;
+}
+.underline:hover {
+  color: inherit;
+}
+
+.projects-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.project-card {
+  p {
+    font-weight: normal;
+  }
+}
+
+.project-hero-image {
+  width: 100%;
+  -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+.project-card:hover {
+  color: inherit !important;
+}
+
+.project-roles {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.project-role {
+  background-color: #60b0f4;
+  color: black;
+  margin: 5px;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.project-role:hover {
+  background-color: #389bf1;
+  color: black;
+}
+
+@media (min-width: 1401px) {
+  .projects-title {
+    padding-left: unset;
+    text-align: center;
+  }
+}
+
+.markdown {
+  max-width: 1000px;
+  margin: 30px 5vw;
+  text-align: left;
+}
