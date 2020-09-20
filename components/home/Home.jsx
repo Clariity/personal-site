@@ -4,12 +4,13 @@ import BounceArrow from "../BounceArrow";
 import Carousel from "./Carousel";
 import HomeProjects from "./HomeProjects";
 import Lottie from "react-lottie";
-import LottieData from "../../media/7393-fireworks.json";
-import SEO from "../Seo";
+import LottieData from "../../public/media/7393-fireworks.json";
 import Welcome from "./Welcome";
 
 function Home() {
-  const t1 = new Date(1997, 11, 2, 8, 10, 0, 0); // Month is 0 indexed
+  // const t1 = new Date(1997, 11, 2, 8, 10, 0, 0); // Month is 0 indexed
+  const t1 = new Date(1997, 8, 20, 14, 17, 0, 0); // Month is 0 indexed
+
   const t2 = new Date();
   const dif = t2.getTime() - t1.getTime();
   const ageDate = Math.abs(new Date(dif).getUTCFullYear() - 1970);
@@ -71,7 +72,6 @@ function Home() {
 
   return (
     <div className="row">
-      <SEO title="Home" />
       {showFireworks && (
         <>
           <div className="lottie-animation">

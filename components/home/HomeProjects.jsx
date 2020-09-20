@@ -2,8 +2,8 @@ import React from "react";
 
 import ProjectCard from "../ProjectCard";
 
-import { Link } from "react-router-dom";
-import { metadata } from "../../content/metadata";
+import Link from "next/link";
+import { metadata } from "../../content/projects/metadata";
 
 function HomeProjects({ scrollRef }) {
   return (
@@ -12,9 +12,11 @@ function HomeProjects({ scrollRef }) {
         <h2>Latest Projects</h2>
       </div>
       <div className="col-xs-6 see-all-projects pad-3-r">
-        <Link className="underline" to="/projects">
-          See all projects
-          <i className="material-icons see-all-icon">read_more</i>
+        <Link href="/projects">
+          <a className="underline">
+            See all projects
+            <i className="material-icons see-all-icon">read_more</i>
+          </a>
         </Link>
       </div>
       {metadata.map((project, index) => {

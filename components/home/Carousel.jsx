@@ -1,9 +1,7 @@
 import React from "react";
 
 import { Carousel } from "react-responsive-carousel";
-import { Link } from "react-router-dom";
-
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Link from "next/link";
 
 function CarouselLinks() {
   return (
@@ -15,38 +13,52 @@ function CarouselLinks() {
         showArrows={false}
         emulateTouch
         swipeable
-        stopOnHover
+        stopOnHover={false}
         useKeyboardArrows
         showStatus={false}
         showLegends={false}
       >
-        <Link className="pad-3" to="/about">
-          <h1>About Ryan</h1>
-          <img src="images/about-me.svg" alt="about me" />
+        <Link href="/about">
+          <a className="pad-3">
+            <h1>About Ryan</h1>
+            <img src="images/about-me.svg" alt="about me" />
+          </a>
         </Link>
-        <Link className="pad-3" to="/blog">
-          <h1>Blog</h1>
-          <img src="images/blog.svg" alt="blog" />
+        <Link href="/blog">
+          <a className="pad-3">
+            <h1>Blog</h1>
+            <img src="images/blog.svg" alt="blog" />
+          </a>
         </Link>
-        <Link className="pad-3" to="/projects">
-          <h1>Projects</h1>
-          <img src="images/projects.svg" alt="projects" />
+        <Link href="/projects">
+          <a className="pad-3">
+            <h1>Projects</h1>
+            <img src="images/projects.svg" alt="projects" />
+          </a>
         </Link>
-        <Link className="pad-3" to="/code">
-          <h1>Code Snippets</h1>
-          <img src="images/code.svg" alt="code snippets" />
+        <Link href="/code">
+          <a className="pad-3">
+            <h1>Code Snippets</h1>
+            <img src="images/code.svg" alt="code snippets" />
+          </a>
         </Link>
-        <Link className="pad-3" to="/stats">
-          <h1>Stats</h1>
-          <img src="images/stats.svg" alt="stats" />
+        <Link href="/stats">
+          <a className="pad-3">
+            <h1>Stats</h1>
+            <img src="images/stats.svg" alt="stats" />
+          </a>
         </Link>
-        <Link className="pad-3" to="/plans">
-          <h1>Site Plans</h1>
-          <img src="images/kanban.svg" alt="kanban" />
+        <Link href="/plans">
+          <a className="pad-3">
+            <h1>Site Plans</h1>
+            <img src="images/kanban.svg" alt="kanban" />
+          </a>
         </Link>
-        <Link className="pad-3" to="/credits">
-          <h1>Credits</h1>
-          <img src="images/credits.svg" alt="credits" />
+        <Link href="/credits">
+          <a className="pad-3">
+            <h1>Credits</h1>
+            <img src="images/credits.svg" alt="credits" />
+          </a>
         </Link>
       </Carousel>
     </div>

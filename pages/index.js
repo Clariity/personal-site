@@ -1,13 +1,11 @@
-import Head from "next/head";
+import Home from "../components/home/Home";
+import SEO from "../components/SEO";
 
-export default function Home() {
+export default function Index() {
   return (
     <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      hello there
+      <SEO title="home" />
+      <Home />
     </div>
   );
 }

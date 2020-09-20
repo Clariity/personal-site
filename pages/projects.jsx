@@ -1,27 +1,32 @@
 import React from "react";
-import SEO from "../Seo";
-import { metadata } from "../../content/metadata";
-import ProjectCard from "../ProjectCard";
-import { useLocation, useParams, Link } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+import SEO from "../components/SEO";
+import { metadata } from "../content/projects/metadata";
+import ProjectCard from "../components/ProjectCard";
 
 function Projects() {
-  let location = useLocation();
-  let { role } = useParams();
+  const router = useRouter();
+  const { role } = router.query;
+
   return (
     <div className="row fill-width">
-      <SEO title="Projects" />
+      <SEO title="projects" />
       <h1 className="col-xs-12 margin-1-t text-align-left projects-title">Projects</h1>
       <div className="col-xs-12 row projects-container">
-        {location.pathname.includes("projects/roles/") && (
+        {role && (
           <div className="col-xs-12 text-align-left projects-tag-return margin-2-b ">
-            <Link className="underline" to="/projects">
-              <i class="material-icons return-icon">keyboard_return</i>
-              Viewing projects with the role tag: {role}
+            <Link href="/projects">
+              <a className="underline">
+                <i class="material-icons return-icon">keyboard_return</i>
+                Viewing projects with the role tag: {role}
+              </a>
             </Link>
           </div>
         )}
         {metadata.map((project, index) => {
-          if (location.pathname.includes("projects/roles/"))
+          if (role)
             return project.roles.includes(role) && <ProjectCard key={index} project={project} />;
           else return <ProjectCard key={index} project={project} />;
         })}

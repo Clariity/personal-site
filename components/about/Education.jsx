@@ -49,7 +49,7 @@ export default function Education() {
 
       {Object.entries(marks).map((entry, index) => {
         return (
-          <div className="row">
+          <div className="row" key={index}>
             <div className="col-xs-12 text-align-left">
               <p>{entry[0]}</p>
             </div>
@@ -81,7 +81,7 @@ export default function Education() {
         <>
           {Object.entries(marksLess).map((entry, index) => {
             return (
-              <div className="row">
+              <div className="row" key={index + "-extended"}>
                 <div className="col-xs-12 text-align-left">
                   <p>{entry[0]}</p>
                 </div>

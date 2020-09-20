@@ -6,7 +6,7 @@ import useDarkMode from "use-dark-mode";
 import Link from "next/link";
 import BurgerMenu from "./BurgerMenu";
 
-function Navigation() {
+export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const darkMode = useDarkMode(false);
 
@@ -19,9 +19,7 @@ function Navigation() {
           </a>
         </Link>
       </div>
-      <div
-        className={`col-xs-8 text-align-right navigation-align ${darkMode.value && "dark-hover"}`}
-      >
+      <div className={`col-xs-8 text-align-right navigation-align`}>
         {menuOpen ? (
           <i className="material-icons navigation-button" onClick={() => setMenuOpen(false)}>
             expand_less
@@ -41,5 +39,3 @@ function Navigation() {
     </div>
   );
 }
-
-export default Navigation;

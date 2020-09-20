@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 function Welcome() {
   return (
     <div className="col-xs-12 col-md-4 pad-4">
       <h1>Welcome</h1>
-      <Link className="is-black-always" to="/about#experience">
-        <p className="slide-button">
+      <Link href="/about#experience">
+        <p className="is-black-always slide-button">
           For skills and experience, click here to head straight to the good stuff
         </p>
       </Link>

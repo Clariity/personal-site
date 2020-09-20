@@ -1,33 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 
 import ScrollAnimation from "react-animate-on-scroll";
-import SEO from "../Seo";
 
-import Bio from "./Bio";
-import Hobbies from "./Hobbies";
-import ExperienceTimeline from "./ExperienceTimeline";
-import Logos from "./Logos";
+import Bio from "../components/about/Bio";
+import Hobbies from "../components/about/Hobbies";
+import ExperienceTimeline from "../components/about/ExperienceTimeline";
+import Logos from "../components/about/Logos";
 
-import { useLocation } from "react-router-dom";
-import Education from "./Education";
-
-// add tools to Logos of Competancy so i can add stuff like git (and docker when i come to know it)
-
-// GitHub Commits and Repos Section
-
-// LinkedIn
-// Twitter
-// Github
-
-// Have some form of scrolling indicator
+import Education from "../components/about/Education";
+import SEO from "../components/SEO";
 
 function About() {
-  const { hash } = useLocation();
-
-  useEffect(() => {
-    if (hash !== "") scrollTo(experienceRef);
-  }, [hash]);
-
   const scrollTo = (ref) =>
     window.scrollTo({
       top: ref.current.offsetTop,
@@ -39,7 +22,7 @@ function About() {
 
   return (
     <div className="row">
-      <SEO title="About Ryan" />
+      <SEO title="about" />
       <div className="col-xs-12 pad-4-lr pad-5-b max-1400">
         <h1>It's All About Ryan</h1>
       </div>
@@ -73,7 +56,7 @@ function About() {
           </ScrollAnimation>
           <Hobbies />
         </div>
-        <div className="col-xs-12 pad-4-lr pad-5-b" ref={experienceRef}>
+        <div className="col-xs-12 pad-4-lr pad-5-b" ref={experienceRef} id="experience">
           <ScrollAnimation animateIn="fadeIn">
             <h2 className="text-align-center">My Experience Timeline</h2>
             <ExperienceTimeline />
