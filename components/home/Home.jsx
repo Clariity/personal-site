@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import BounceArrow from "../BounceArrow";
+import BounceArrow from "../other/BounceArrow";
 import Carousel from "./Carousel";
 import HomeProjects from "./HomeProjects";
 import Lottie from "react-lottie";
@@ -92,7 +92,7 @@ function Home() {
       <div className="col-xs-12">
         <img
           className="home-image grow hover"
-          src="/images/feelingproud.svg"
+          src="/images/unDraw/feelingproud.svg"
           alt="hero"
           onClick={() => console.log("Do something")}
         />

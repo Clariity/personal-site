@@ -1,8 +1,9 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import Loading from "../../components/Loading";
-import SEO from "../../components/SEO";
 import { useRouter } from "next/router";
+
+import Loading from "../../components/other/Loading";
+import SEO from "../../components/other/SEO";
 
 function Project() {
   const router = useRouter();
@@ -33,7 +34,7 @@ function Project() {
       <div className="markdown">
         <div className="col-xs-12">
           <img
-            src={`/images/${projectName}.png`}
+            src={`/images/projects/${projectName}.png`}
             alt="project hero"
             className="project-hero-image"
           />

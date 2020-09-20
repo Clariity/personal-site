@@ -8,7 +8,7 @@ import ExperienceTimeline from "../components/about/ExperienceTimeline";
 import Logos from "../components/about/Logos";
 
 import Education from "../components/about/Education";
-import SEO from "../components/SEO";
+import SEO from "../components/other/SEO";
 
 function About() {
   const scrollTo = (ref) =>
@@ -30,7 +30,7 @@ function About() {
         <ScrollAnimation animateIn="fadeIn" delay={200} duration={1}>
           <img
             className="about-avatar grow hover pad-5-t"
-            src="/images/avatar2.jpg"
+            src="/images/avatars/avatar2.jpg"
             alt="hero"
             onClick={() => console.log("Do something")}
           />
@@ -81,7 +81,7 @@ function About() {
             Setting up API server first so that this section can be responsibly populated
             <img
               className=" pad-5 width-75"
-              src="images/sourceCode.svg"
+              src="images/unDraw/sourceCode.svg"
               alt="University of Southampton"
             />
           </ScrollAnimation>

@@ -41,7 +41,11 @@ export default function Education() {
   return (
     <div>
       <ScrollAnimation animateIn="fadeIn">
-        <img className="width-75" src="images/soton.svg" alt="University of Southampton" />
+        <img
+          className="width-75"
+          src="images/education/soton.svg"
+          alt="University of Southampton"
+        />
         <h4>2016 - 2020</h4>
         <h3>Masters of Engineering in Computer Science - 1st Class with Honours</h3>
         <b>Module Scores</b>

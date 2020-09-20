@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import SEO from "../components/SEO";
+import SEO from "../components/other/SEO";
 import { metadata } from "../content/projects/metadata";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/other/ProjectCard";
 
 function Projects() {
   const router = useRouter();

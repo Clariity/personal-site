@@ -1,5 +1,5 @@
 import Home from "../components/home/Home";
-import SEO from "../components/SEO";
+import SEO from "../components/other/SEO";
 
 export default function Index() {
   return (

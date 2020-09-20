@@ -58,7 +58,7 @@ function ExperienceTimeline() {
         icon={
           <img
             className="image-icon"
-            src="/images/cyber-security.png"
+            src="/images/education/cyber-security.png"
             alt="University of Southampton"
           ></img>
         }
@@ -84,7 +84,7 @@ function ExperienceTimeline() {
         icon={
           <img
             className="image-icon"
-            src="/images/willingdon.jpg"
+            src="/images/education/willingdon.jpg"
             alt="Willingdon Community School"
           ></img>
         }

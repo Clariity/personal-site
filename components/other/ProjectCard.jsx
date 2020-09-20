@@ -8,7 +8,7 @@ function ProjectCard({ project }) {
         <a className="grow project-card margin-5-b text-align-left row">
           <div className="col-xs-12">
             <img
-              src={`/images/${project.imageName}`}
+              src={`/images/projects/${project.imageName}`}
               alt="project hero"
               className="project-hero-image"
             />

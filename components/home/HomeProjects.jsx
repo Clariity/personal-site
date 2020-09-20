@@ -1,6 +1,6 @@
 import React from "react";
 
-import ProjectCard from "../ProjectCard";
+import ProjectCard from "../Other/ProjectCard";
 
 import Link from "next/link";
 import { metadata } from "../../content/projects/metadata";

@@ -15,7 +15,7 @@ function Hobbies() {
       </div>
       <div className="col-xs-12 col-md-6 align-self-center">
         <ScrollAnimation animateIn="fadeIn">
-          <img className="fill-width reduce-on-small" src="images/gaming.svg" alt="blog" />
+          <img className="fill-width reduce-on-small" src="images/unDraw/gaming.svg" alt="blog" />
         </ScrollAnimation>
       </div>
       <div className="col-xs-12 col-md-6">
@@ -59,7 +59,7 @@ function Hobbies() {
       </div>
       <div className="col-xs-12 col-md-6 align-self-center order-1">
         <ScrollAnimation animateIn="fadeIn">
-          <img className="fill-width reduce-on-small" src="images/gym.svg" alt="blog" />
+          <img className="fill-width reduce-on-small" src="images/unDraw/gym.svg" alt="blog" />
         </ScrollAnimation>
       </div>
     </div>

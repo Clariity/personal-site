@@ -21,43 +21,43 @@ function CarouselLinks() {
         <Link href="/about">
           <a className="pad-3">
             <h1>About Ryan</h1>
-            <img src="images/about-me.svg" alt="about me" />
+            <img src="images/unDraw/about-me.svg" alt="about me" />
           </a>
         </Link>
         <Link href="/blog">
           <a className="pad-3">
             <h1>Blog</h1>
-            <img src="images/blog.svg" alt="blog" />
+            <img src="images/unDraw/blog.svg" alt="blog" />
           </a>
         </Link>
         <Link href="/projects">
           <a className="pad-3">
             <h1>Projects</h1>
-            <img src="images/projects.svg" alt="projects" />
+            <img src="images/unDraw/projects.svg" alt="projects" />
           </a>
         </Link>
         <Link href="/code">
           <a className="pad-3">
             <h1>Code Snippets</h1>
-            <img src="images/code.svg" alt="code snippets" />
+            <img src="images/unDraw/code.svg" alt="code snippets" />
           </a>
         </Link>
         <Link href="/stats">
           <a className="pad-3">
             <h1>Stats</h1>
-            <img src="images/stats.svg" alt="stats" />
+            <img src="images/unDraw/stats.svg" alt="stats" />
           </a>
         </Link>
         <Link href="/plans">
           <a className="pad-3">
             <h1>Site Plans</h1>
-            <img src="images/kanban.svg" alt="kanban" />
+            <img src="images/unDraw/kanban.svg" alt="kanban" />
           </a>
         </Link>
         <Link href="/credits">
           <a className="pad-3">
             <h1>Credits</h1>
-            <img src="images/credits.svg" alt="credits" />
+            <img src="images/unDraw/credits.svg" alt="credits" />
           </a>
         </Link>
       </Carousel>
