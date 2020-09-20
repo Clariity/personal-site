@@ -1,47 +1,15 @@
 {
-  "name": "personal-site",
+  "name": "personal-site-v2",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-animate-on-scroll": "^2.1.5",
-    "react-dark-mode-toggle": "0.0.9",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0",
-    "react-loading": "^2.0.3",
-    "react-lottie": "^1.2.3",
-    "react-markdown": "^4.3.1",
-    "react-responsive-carousel": "^3.2.9",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3",
-    "react-smooth-collapse": "^2.1.0",
-    "react-vertical-timeline-component": "^3.0.2",
-    "react-visibility-sensor": "^5.1.1",
-    "use-dark-mode": "^2.3.1"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "next": "9.5.3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   }
 }
