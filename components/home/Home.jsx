@@ -8,8 +8,8 @@ import LottieData from "../../public/media/7393-fireworks.json";
 import Welcome from "./Welcome";
 
 function Home() {
-  // const t1 = new Date(1997, 11, 2, 8, 10, 0, 0); // Month is 0 indexed
-  const t1 = new Date(1997, 8, 20, 14, 17, 0, 0); // Month is 0 indexed
+  const t1 = new Date(1997, 11, 2, 8, 10, 0, 0); // Month is 0 indexed
+  // const t1 = new Date(1997, 8, 22, 18, 15, 0, 0); // Month is 0 indexed
 
   const t2 = new Date();
   const dif = t2.getTime() - t1.getTime();

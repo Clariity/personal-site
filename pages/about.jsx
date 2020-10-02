@@ -6,7 +6,7 @@ import Bio from "../components/about/Bio";
 import Hobbies from "../components/about/Hobbies";
 import ExperienceTimeline from "../components/about/ExperienceTimeline";
 import Logos from "../components/about/Logos";
-
+import HomeProjects from "../components/home/HomeProjects";
 import Education from "../components/about/Education";
 import SEO from "../components/other/SEO";
 
@@ -66,6 +66,12 @@ function About() {
           <ScrollAnimation animateIn="fadeIn">
             <h2 className="text-align-center">Logos of Competency</h2>
             <Logos />
+          </ScrollAnimation>
+        </div>
+        <div className="col-xs-12 pad-4-lr pad-5-b">
+          <ScrollAnimation animateIn="fadeIn">
+            <h2 className="text-align-center">Some of My Work</h2>
+            <HomeProjects />
           </ScrollAnimation>
         </div>
         <div className="col-xs-12 pad-4-lr pad-5-b">

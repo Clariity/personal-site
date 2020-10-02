@@ -19,7 +19,7 @@ function Projects() {
           <div className="col-xs-12 text-align-left projects-tag-return margin-2-b ">
             <Link href="/projects">
               <a className="underline">
-                <i class="material-icons return-icon">keyboard_return</i>
+                <i className="material-icons return-icon">keyboard_return</i>
                 Viewing projects with the role tag: {role}
               </a>
             </Link>

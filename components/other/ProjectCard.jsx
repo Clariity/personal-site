@@ -4,7 +4,7 @@ import Link from "next/link";
 function ProjectCard({ project }) {
   return (
     <div className="col-xs-12 col-md-6">
-      <Link href={`/projects/${project.name}`}>
+      <Link href={`/projects/[project]`} as={`/projects/${project.name}`}>
         <a className="grow project-card margin-5-b text-align-left row">
           <div className="col-xs-12">
             <img

@@ -7,6 +7,7 @@
 @import "./colors";
 @import "./home.scss";
 @import "./about.scss";
+@import "./footer.scss";
 
 //60b0f4
 //Monoton
@@ -64,12 +65,28 @@ body.light-mode {
   .vertical-timeline-element-date {
     color: #000;
   }
+
+  .control-prev.control-arrow:before {
+    border-right: 8px solid #000;
+  }
+  .control-next.control-arrow:before {
+    border-left: 8px solid #000;
+  }
 }
 
 body.dark-mode {
   background-color: #1a1919;
   color: rgb(190, 190, 190);
   transition: background-color 0.3s ease;
+
+  .hamburger-inner,
+  .hamburger-inner:before,
+  .hamburger-inner::after,
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: rgb(190, 190, 190);
+  }
 }
 
 .legal {

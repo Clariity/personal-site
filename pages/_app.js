@@ -20,6 +20,10 @@ import "react-vertical-timeline-component/style.min.css";
 // Sort out text alignments and keep constant justificication
 // Sort out paddings so they are all the same (About page has a mix and match currently) --> (wrap higher components in max-1400)
 // Add relevant description/link to ECS page and public facing projects to each module in education
+// Add view source code link somewhere easy
+// Hosting: https://vercel.com/#get-started https://nextjs.org/docs/deployment
+// Cron: https://medium.com/@dbredvick/how-to-create-a-cron-job-with-nextjs-and-now-159aa973c00e -- Will need to allow CORS and set allowed origin to be the cron site, hopefully is a consistent url
+// npm run analyse and see what bundle sizes are
 
 function MyApp({ Component, pageProps }) {
   return (

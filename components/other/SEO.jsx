@@ -11,7 +11,7 @@ export default function SEO({ description, title, image, location }) {
 
   return (
     <Head>
-      <title>ryangregory.dev | {title}</title>
+      <title> {title} | ryangregory.dev</title>
 
       <meta name="title" content={`ryangregory.dev | ${title}`} />
       <meta name="description" content={metaDescription} />

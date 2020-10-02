@@ -20,15 +20,15 @@ export default function Navigation() {
         </Link>
       </div>
       <div className={`col-xs-8 text-align-right navigation-align`}>
-        {menuOpen ? (
-          <i className="material-icons navigation-button" onClick={() => setMenuOpen(false)}>
-            expand_less
-          </i>
-        ) : (
-          <i className="material-icons navigation-button" onClick={() => setMenuOpen(true)}>
-            menu
-          </i>
-        )}
+        <button
+          className={`hamburger hamburger--collapse ${menuOpen && "is-active"}`}
+          type="button"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
         <DarkModeToggle onChange={darkMode.toggle} checked={darkMode.value} size={80} />
       </div>
       <div className="col-xs-12 pad-0-lr">

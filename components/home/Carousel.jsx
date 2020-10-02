@@ -10,10 +10,10 @@ function CarouselLinks() {
         autoPlay
         infiniteLoop
         showThumbs={false}
-        showArrows={false}
+        showArrows={true}
         emulateTouch
         swipeable
-        stopOnHover={false}
+        stopOnHover={true}
         useKeyboardArrows
         showStatus={false}
         showLegends={false}

@@ -12,7 +12,7 @@
   height: 100%;
 }
 .fill-height-screen {
-  min-height: calc(100vh - 280px);
+  min-height: calc(100vh - 340px);
 }
 
 .font-10 {
@@ -43,6 +43,16 @@
 }
 .align-horizontal {
   align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
 }
 
 .align-vertical {
