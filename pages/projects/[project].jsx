@@ -32,7 +32,7 @@ function Project() {
     <div className="row">
       <SEO title={projectName} />
       <div className="markdown">
-        <div className="col-xs-12">
+        <div className="col-xs-12 pad-0">
           <img
             src={`/images/projects/${projectName}.png`}
             alt="project hero"
