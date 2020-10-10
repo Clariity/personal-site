@@ -4,23 +4,67 @@
   // border-bottom: 5px solid #60b0f4;
 }
 
+.site-logo {
+  padding: 20px 0px;
+  height: 40px;
+}
+
+.toggle {
+  cursor: pointer;
+  position: absolute;
+  top: 22px;
+  right: 160px;
+  font-size: 30px;
+}
+
+.toggle:before {
+  content: "☀️";
+}
+
+.toggle.darkModeActive:before {
+  content: "🌒";
+}
+
+.toggle.animate {
+  animation: animate 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.wave {
+  position: absolute;
+  top: 45px;
+  right: 180px;
+  border-radius: 100%;
+  width: 2px;
+  height: 2px;
+  display: block;
+  z-index: -1;
+  box-shadow: 0 0 0 0 #1a1919;
+  transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wave.darkModeActive {
+  background: #1a1919;
+  box-shadow: 0 0 0 29999px #1a1919;
+  transition: box-shadow 3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .navigation-align {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 20px;
-}
-
-.navigation-button {
-  margin: 20px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 40px;
-}
-
-.navigation-button:hover {
-  color: #60b0f4;
-  cursor: pointer;
+  padding-right: 0;
 }
 
 .dark-hover > i:hover {
@@ -41,6 +85,41 @@
 
 .navigation-link:hover:before {
   transform: translate3d(50%, 50%, 0) scale3d(15, 15, 15);
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+.github-corner-svg {
+  width: 80px;
+  height: 80px;
+  // padding-right: 10px;
+  fill: #60b0f4;
+  color: #fff;
+  position: relative;
+  top: 0;
+  border: 0;
+  right: 0;
+}
+
+.github-corner-svg-path {
+  transform-origin: 130px 106px;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
 }
 
 /*!
@@ -148,4 +227,53 @@
   transform: rotate(-90deg);
   transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
     transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@media (max-width: 400px) {
+  .site-logo {
+    padding: 10px 0px;
+    height: 30px;
+  }
+
+  .github-corner-svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hamburger {
+    padding: 10px 10px;
+  }
+
+  .hamburger-box {
+    width: 30px;
+    height: 18px;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 30px;
+    height: 3px;
+  }
+
+  .hamburger-inner::before {
+    top: -8px;
+  }
+  .hamburger-inner::after {
+    bottom: -8px;
+  }
+  .hamburger--collapse .hamburger-inner::after {
+    top: -16px;
+  }
+
+  .toggle {
+    top: 8px;
+    right: 110px;
+    font-size: 25px;
+  }
+
+  .wave {
+    top: 25px;
+    right: 125px;
+  }
 }

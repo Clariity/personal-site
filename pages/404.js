@@ -19,7 +19,7 @@ export default function Custom404() {
           </Link>
         </div>
         <div className="col-xs-12">
-          <p>Perhaps one of these pages were what you were looking for:</p>
+          <p>Perhaps you were looking for one of these pages:</p>
         </div>
         <div className="col-xs-12">
           <Link href="/">

@@ -42,9 +42,10 @@ body {
   font-size: calc(10px + 1vmin);
 }
 
-.site-logo {
-  padding: 20px 0px;
-  height: 40px;
+.statsNumber {
+  font-size: calc(10px + 1.5vmin);
+  font-weight: bold;
+  color: #60b0f4;
 }
 
 body.light-mode {
@@ -75,7 +76,7 @@ body.light-mode {
 }
 
 body.dark-mode {
-  background-color: #1a1919;
+  // background-color: #1a1919;
   color: rgb(190, 190, 190);
   transition: background-color 0.3s ease;
 
@@ -105,7 +106,6 @@ a {
 }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 5px;
   background-color: #60b0f4;
   background-image: -webkit-linear-gradient(
     45deg,

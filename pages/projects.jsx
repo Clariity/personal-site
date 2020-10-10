@@ -13,7 +13,7 @@ function Projects() {
   return (
     <div className="row fill-width">
       <SEO title="projects" />
-      <h1 className="col-xs-12 margin-1-t text-align-left projects-title">Projects</h1>
+      <h1 className="col-xs-12 margin-1-t projects-title">Projects</h1>
       <div className="col-xs-12 row projects-container">
         {role && (
           <div className="col-xs-12 text-align-left projects-tag-return margin-2-b ">

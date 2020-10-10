@@ -9,6 +9,8 @@ import Logos from "../components/about/Logos";
 import HomeProjects from "../components/home/HomeProjects";
 import Education from "../components/about/Education";
 import SEO from "../components/other/SEO";
+import GitHub from "../components/about/GitHub";
+import EvenMoreAbout from "../components/about/EvenMoreAbout";
 
 function About() {
   const scrollTo = (ref) =>
@@ -82,44 +84,14 @@ function About() {
         </div>
         <div className="col-xs-12 pad-4-lr pad-5-b">
           <ScrollAnimation animateIn="fadeIn">
-            <h2 className="text-align-center">Repositories and Contributions</h2>
-            {/* also link to projects here */}
-            Setting up API server first so that this section can be responsibly populated
-            <img
-              className=" pad-5 width-75"
-              src="images/unDraw/sourceCode.svg"
-              alt="University of Southampton"
-            />
+            <h2 className="text-align-center">GitHub Public Contributions</h2>
+            <GitHub />
           </ScrollAnimation>
         </div>
         <div className="col-xs-12 pad-4-lr pad-5-b">
           <ScrollAnimation animateIn="fadeIn">
             <h2 className="text-align-center">Even More About Ryan</h2>
-            <div className="row font-10">
-              <div className="col-xs-6 col-sm-4">
-                <a
-                  href="https://twitter.com/ryangregorydev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="devicon-twitter-plain colored more-link"></i>
-                </a>
-              </div>
-              <div className="col-xs-6 col-sm-4">
-                <a href="https://github.com/Clariity" target="_blank" rel="noopener noreferrer">
-                  <i className="devicon-github-plain colored more-link"></i>
-                </a>{" "}
-              </div>
-              <div className="col-xs-12 col-sm-4">
-                <a
-                  href="https://www.linkedin.com/in/ryan-gregory-232003189/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="devicon-linkedin-plain colored more-link"></i>
-                </a>{" "}
-              </div>
-            </div>
+            <EvenMoreAbout />
           </ScrollAnimation>
         </div>
       </div>
