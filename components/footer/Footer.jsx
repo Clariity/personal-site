@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="col-xs-12 pad-5-t">
-          <p className="flex-center">
+          <p className="flex-center align-horizontal">
             Made with <img src="./images/icons/heart-strikethrough.png" alt="" height={30} /> a
             keyboard by Ryan Gregory
           </p>
