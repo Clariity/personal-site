@@ -1,47 +1,32 @@
 {
-  "name": "personal-site",
+  "name": "personal-site-v2",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
+    "@mdx-js/loader": "^1.6.18",
+    "@next/mdx": "^9.5.3",
+    "firebase": "^7.22.0",
+    "firebase-admin": "^9.2.0",
+    "next": "^9.5.5",
+    "next-images": "^1.5.0",
     "node-sass": "^4.14.1",
-    "react": "^16.13.1",
+    "react": "16.13.1",
     "react-animate-on-scroll": "^2.1.5",
-    "react-dark-mode-toggle": "0.0.9",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0",
+    "react-dom": "16.13.1",
+    "react-firebase-hooks": "^2.2.0",
     "react-loading": "^2.0.3",
     "react-lottie": "^1.2.3",
-    "react-markdown": "^4.3.1",
     "react-responsive-carousel": "^3.2.9",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3",
     "react-smooth-collapse": "^2.1.0",
     "react-vertical-timeline-component": "^3.0.2",
     "react-visibility-sensor": "^5.1.1",
+    "source-map-explorer": "^2.5.0",
     "use-dark-mode": "^2.3.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }

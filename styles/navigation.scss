@@ -1,0 +1,279 @@
+.navigation {
+  height: auto;
+  width: 100vw;
+  // border-bottom: 5px solid #60b0f4;
+}
+
+.site-logo {
+  padding: 20px 0px;
+  height: 40px;
+}
+
+.toggle {
+  cursor: pointer;
+  position: absolute;
+  top: 22px;
+  right: 160px;
+  font-size: 30px;
+}
+
+.toggle:before {
+  content: "☀️";
+}
+
+.toggle.darkModeActive:before {
+  content: "🌒";
+}
+
+.toggle.animate {
+  animation: animate 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.wave {
+  position: absolute;
+  top: 45px;
+  right: 180px;
+  border-radius: 100%;
+  width: 2px;
+  height: 2px;
+  display: block;
+  z-index: -1;
+  box-shadow: 0 0 0 0 #1a1919;
+  transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wave.darkModeActive {
+  background: #1a1919;
+  box-shadow: 0 0 0 29999px #1a1919;
+  transition: box-shadow 3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-align {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0;
+}
+
+.dark-hover > i:hover {
+  color: #60b0f4;
+}
+
+.navigation-link {
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, #60b0f4 50%, #5097d4 50%);
+  -webkit-transition: background-position 0.3s;
+  -moz-transition: background-position 0.3s;
+  transition: background-position 0.3s;
+}
+
+.navigation-link:hover {
+  background-position: 0 -100%;
+}
+
+.navigation-link:hover:before {
+  transform: translate3d(50%, 50%, 0) scale3d(15, 15, 15);
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+.github-corner-svg {
+  width: 80px;
+  height: 80px;
+  // padding-right: 10px;
+  fill: #60b0f4;
+  color: #fff;
+  position: relative;
+  top: 0;
+  border: 0;
+  right: 0;
+}
+
+.github-corner-svg-path {
+  transform-origin: 130px 106px;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  // display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  display: flex;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger:focus {
+  outline: unset;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #2b2b2b;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--collapse .hamburger-inner::after {
+  top: -20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+.hamburger--collapse .hamburger-inner::before {
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--collapse.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+.hamburger--collapse.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(-90deg);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@media (max-width: 400px) {
+  .site-logo {
+    padding: 10px 0px;
+    height: 30px;
+  }
+
+  .github-corner-svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hamburger {
+    padding: 10px 10px;
+  }
+
+  .hamburger-box {
+    width: 30px;
+    height: 18px;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 30px;
+    height: 3px;
+  }
+
+  .hamburger-inner::before {
+    top: -8px;
+  }
+  .hamburger-inner::after {
+    bottom: -8px;
+  }
+  .hamburger--collapse .hamburger-inner::after {
+    top: -16px;
+  }
+
+  .toggle {
+    top: 8px;
+    right: 110px;
+    font-size: 25px;
+  }
+
+  .wave {
+    top: 25px;
+    right: 125px;
+  }
+}
