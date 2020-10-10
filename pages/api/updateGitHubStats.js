@@ -25,7 +25,7 @@ export default async (req, res) => {
 
       const data = await responseJSON.data.viewer;
 
-      firebase
+      await firebase
         .collection("stats")
         .doc("github")
         .set({
