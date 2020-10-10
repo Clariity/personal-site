@@ -25,13 +25,21 @@ export default async (req, res) => {
 
       const data = await responseJSON.data.viewer;
 
-      firebase.collection("stats").doc("github").set({
-        data: data,
-        timestamp: admin.firestore.FieldValue.serverTimestamp(),
-      });
-
-      statusCode = 200;
-      responseBody = { body: "Success" };
+      firebase
+        .collection("stats")
+        .doc("github")
+        .set({
+          data: data,
+          timestamp: admin.firestore.FieldValue.serverTimestamp(),
+        })
+        .then(function () {
+          statusCode = 200;
+          responseBody = { body: "Success" };
+        })
+        .catch(function (error) {
+          statusCode = 500;
+          responseBody = { body: error };
+        });
     } catch (err) {
       console.log(err);
       responseBody = { error: err };
