@@ -14,7 +14,7 @@ const firebaseConfig = {
 };
 
 try {
-  if (typeof window !== "undefined" && !firebase.apps.length) {
+  if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
   }
