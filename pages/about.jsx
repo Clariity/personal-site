@@ -28,10 +28,10 @@ function About() {
       <div className="col-xs-12 pad-4-lr pad-5-b max-1400">
         <h1>It's All About Ryan</h1>
       </div>
-      <div className="col-xs-12 pad-4 is-blue-bg is-black-always fill-screen">
+      <div className="col-xs-12 pad-4 is-blue-bg is-black-always fill-screen pad-5-t">
         <ScrollAnimation animateIn="fadeIn" delay={200} duration={1}>
           <img
-            className="about-avatar grow hover pad-5-t"
+            className="about-avatar grow hover"
             src="/images/avatars/avatar2.jpg"
             alt="hero"
             onClick={() => console.log("Do something")}

@@ -15,14 +15,19 @@
   top: 22px;
   right: 160px;
   font-size: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle:hover {
+  transform: scale(1.1);
 }
 
 .toggle:before {
-  content: "☀️";
+  content: "🌞";
 }
 
 .toggle.darkModeActive:before {
-  content: "🌒";
+  content: "🌚";
 }
 
 .toggle.animate {

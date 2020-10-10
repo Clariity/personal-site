@@ -2,8 +2,8 @@ import React from "react";
 import Head from "next/head";
 
 export default function SEO({ description, title, image, location }) {
-  const defaultDescription = "My personsl site, have a gander";
-  const defaultImageURL = "./logo.png";
+  const defaultDescription = "My personal site, have a gander";
+  const defaultImageURL = "/logo.png";
 
   const metaDescription = description || defaultDescription;
   const metaImage = image || defaultImageURL;
@@ -13,20 +13,20 @@ export default function SEO({ description, title, image, location }) {
     <Head>
       <title> {title} | ryangregory.dev</title>
 
-      <meta name="title" content={`ryangregory.dev | ${title}`} />
+      <meta name="title" content={`${title} | ryangregory.dev`} />
       <meta name="description" content={metaDescription} />
 
       <link rel="canonical" href={url} />
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
-      <meta property="og:title" content={`ryangregory.dev | ${title}`} />
+      <meta property="og:title" content={`${title} | ryangregory.dev`} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={metaImage} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="ryangregory.dev" />
-      <meta name="twitter:title" content={`ryangregory.dev | ${title}`} />
+      <meta name="twitter:title" content={`${title} | ryangregory.dev`} />
       <meta property="twitter:url" content={url} />
       <meta name="twitter:description" content={metaDescription} />
       <meta property="twitter:image" content={metaImage} />
@@ -58,6 +58,9 @@ export default function SEO({ description, title, image, location }) {
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
         rel="stylesheet"
       />
+
+      <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+      <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
 
       <html lang="en" />
     </Head>
