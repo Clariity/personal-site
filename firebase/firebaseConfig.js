@@ -15,6 +15,7 @@ const firebaseConfig = {
 
 try {
   firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 } catch (error) {
   if (!/already exists/u.test(error.message)) {
     console.error("Firebase admin initialization error", error.stack);
