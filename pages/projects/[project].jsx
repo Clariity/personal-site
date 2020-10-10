@@ -11,6 +11,7 @@ function Project() {
 
   const MDXContent = dynamic(() => import(`../../content/projects/${projectName}.mdx`), {
     loading: () => <Loading />,
+    ssr: false,
   });
 
   // const MDXMetadata = dynamic(() =>
