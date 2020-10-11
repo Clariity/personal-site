@@ -40,6 +40,7 @@ export default function Navigation() {
           className={`hamburger hamburger--collapse ${menuOpen && "is-active"}`}
           type="button"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Burger Menu"
         >
           <span className="hamburger-box">
             <span className="hamburger-inner"></span>

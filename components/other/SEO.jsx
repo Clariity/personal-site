@@ -53,7 +53,10 @@ export default function SEO({ description, title, image, location }) {
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css"
       />
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
+        rel="stylesheet"
+      />
       <link
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
         rel="stylesheet"
