@@ -10,6 +10,18 @@ function GitHub() {
   });
 
   if (!loading) {
+    if (error) {
+      return (
+        <div className="row">
+          <div className="col-xs-12">
+            <p>
+              It seems the data on GitHub statistics was not able to be retrieved. This is either a
+              Firebase issue or the request was blocked by your network.
+            </p>
+          </div>
+        </div>
+      );
+    }
     const data = value.data().data;
     const commits = data.contributionsCollection.commitContributionsByRepository;
     const pullRequests = data.contributionsCollection.pullRequestContributionsByRepository;
