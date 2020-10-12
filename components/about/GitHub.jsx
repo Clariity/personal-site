@@ -105,7 +105,13 @@ function GitHub() {
       </div>
     );
   }
-  return <Loading />;
+  return (
+    <div className="row">
+      <div className="col-xs-12">
+        <Loading />
+      </div>
+    </div>
+  );
 }
 
 export default GitHub;
