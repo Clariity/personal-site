@@ -35,7 +35,7 @@ export function ProjectWrapper({
 
       <div className="xl:w-3/4 mx-auto shadow-lg mb-6 lg:mb-12 rounded-lg overflow-hidden">
         <Image
-          src={`/images/projects/${meta.title}.png`}
+          src={`/images/projects/${meta.title.toLowerCase()}.png`}
           alt="hero"
           layout="responsive"
           width={600}
