@@ -1,0 +1,23 @@
+import { getStaticProps as staticProps } from "../../functions/helpers";
+import { HeadingOne } from "../../components/utils/HeadingOne";
+import { ProjectWrapper } from "../../components/projects/ProjectWrapper";
+
+export const meta = {
+  title: "ChessOpenings",
+  description:
+    "A free Chess website to learn Chess openings and train your Chess openings knowledge. Powered by crowd sourcing.",
+  date: "2022-09-24",
+  tags: ["Chess", "Website"],
+};
+
+<HeadingOne>ChessOpenings.co.uk</HeadingOne>
+
+this is a test post
+
+export default ({ children, projects }) => (
+  <ProjectWrapper meta={meta} projects={projects}>
+    {children}
+  </ProjectWrapper>
+);
+
+export const getStaticProps = async () => staticProps(meta);

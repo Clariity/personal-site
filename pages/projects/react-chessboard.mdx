@@ -1,0 +1,22 @@
+import { getStaticProps as staticProps } from "../../functions/helpers";
+import { ProjectWrapper } from "../../components/projects/ProjectWrapper";
+
+export const meta = {
+  title: "react-chessboard",
+  description:
+    "An NPM package to display a chessboard, and drag and drop and its pieces in React.",
+  date: "2022-08-07",
+  tags: ["Chess", "NPM"],
+};
+
+# react-chessboard
+
+this is a test post
+
+export default ({ children, projects }) => (
+  <ProjectWrapper meta={meta} projects={projects}>
+    {children}
+  </ProjectWrapper>
+);
+
+export const getStaticProps = async () => staticProps(meta);
