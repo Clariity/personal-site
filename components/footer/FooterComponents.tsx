@@ -56,6 +56,7 @@ export function FooterExternalLink({ link, text }: FooterLinkProps) {
 export function FooterLinkedInLink() {
   return (
     <a
+      aria-label="linkedin link"
       href={RYAN_LINKEDIN_LINK}
       target="_blank"
       rel="noopener noreferrer"
@@ -77,6 +78,7 @@ export function FooterLinkedInLink() {
 export function FooterTwitterLink() {
   return (
     <a
+      aria-label="twitter link"
       href={RYAN_TWITTER_LINK}
       target="_blank"
       rel="noopener noreferrer"
@@ -99,6 +101,7 @@ export function FooterTwitterLink() {
 export function FooterGitHubLink() {
   return (
     <a
+      aria-label="github link"
       href={RYAN_GITHUB_LINK}
       target="_blank"
       rel="noopener noreferrer"
