@@ -23,11 +23,13 @@ export function AboutSummary() {
   const strengths = ["React", "Next", "Firebase", "Tailwind", "UX", "Security"];
 
   return (
-    <div className="grid gap-3 md:gap-6 xl:gap-8 grid-cols-1 xl:grid-cols-3 mb-24">
-      <div className="flex flex-col items-center border-4 border-primary rounded-lg p-4 shadow-lg col-span-2 xl:col-span-1">
-        <HeadingTwo>About Me</HeadingTwo>
+    <div className="grid gap-3 md:gap-6 xl:gap-8 grid-cols-1 xl:grid-cols-3 mb-12 md:mb-16 lg:mb-24">
+      <div className="flex flex-col items-center p-4 col-span-2 xl:col-span-1">
+        <div className="flex justify-center mb-4">
+          <HeadingTwo>About Me</HeadingTwo>
+        </div>
 
-        <p className="text-center text-sm sm:text-md lg:text-lg sm:leading-loose lg:leading-loose">
+        <p className="text-justify text-sm sm:text-md lg:text-lg sm:leading-loose lg:leading-loose">
           Hi there! <b>I&apos;m Ryan Gregory</b>. I&apos;m a{" "}
           <b>{calculateAge()} year old Front End Engineer</b> from <b>London</b>
           , UK and I&apos;m currently working as a <b>Front End Engineer</b> in

@@ -48,7 +48,7 @@ export function JobCard({
       >
         <div className="w:10/12 lg:w-1/2">
           <div
-            className={`relative bg-secondary border-primary border-4 rounded-lg shadow-xl ml-20 lg:mx-16 my-4 p-6 ${
+            className={`relative bg-secondary border-primary border-4 rounded-lg shadow-lg ml-20 lg:mx-16 my-4 p-6 ${
               inView ? "motion-safe:animate-slideInRight" : ""
             } ${
               index % 2

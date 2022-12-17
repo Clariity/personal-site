@@ -9,9 +9,9 @@ type HomeProjectsProps = {
 export function HomeProjects({ projects }: HomeProjectsProps) {
   return (
     <div className="flex flex-col mb-12">
-      <div className="flex items-center">
+      <div className="flex items-center mb-2">
         <HeadingTwo>Latest Projects</HeadingTwo>
-        <div className="ml-auto text-right text-sm sm:text-lg mb-4">
+        <div className="ml-auto text-right text-sm sm:text-lg">
           <LinkText href="/projects">
             See all projects
             <i className="material-icons see-all-icon ml-2 text-3xl">

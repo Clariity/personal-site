@@ -55,19 +55,15 @@ export default function Projects({ projects }: ProjectsProps) {
     <>
       <SEO title="projects" />
 
-      <TitleCard>
-        <div className="w-1/2 flex flex-col justify-center items-center">
-          <HeadingOne noMargin>Projects</HeadingOne>
-        </div>
-
-        <div className="w-1/2 max-h-[350px] min-h-[98px] sm:min-h-[186px] md:min-h-[230px] lg:min-h-[314px] xl:min-h-[350px] relative">
+      <TitleCard coverHalf title="Projects">
+        <div className="mx-4 max-h-[350px] min-h-[200px] sm:min-h-[186px] md:min-h-[230px] lg:min-h-[314px] xl:min-h-[350px] relative">
           {projects.slice(0, 2).map((p, i) => (
             <div
               key={p.id}
-              className={`w-2/3 absolute shadow-lg max-w-[400px] transition-all duration-100 ease-linear ${
+              className={`w-3/5 md:w-2/3 absolute shadow-lg max-w-[400px] transition-all duration-100 ease-linear ${
                 i
-                  ? "sm:top-4 -rotate-3"
-                  : "bottom-0 sm:bottom-4 right-0 xl:right-4 rotate-3"
+                  ? "top-10 sm:top-4 -rotate-3"
+                  : "bottom-10 sm:bottom-4 right-0 xl:right-4 rotate-3"
               }`}
               ref={i ? cardTwo : cardOne}
               onMouseMove={(e) => handleCardTilt(e, i ? cardTwo : cardOne, i)}
@@ -86,7 +82,7 @@ export default function Projects({ projects }: ProjectsProps) {
         </div>
       </TitleCard>
 
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 mb-12">
+      <div className="grid gap-2 md:gap-8 grid-cols-2 mb-12">
         {projects.map((p) => {
           return <ProjectCard key={p.id} project={p} />;
         })}

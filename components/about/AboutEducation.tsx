@@ -22,11 +22,11 @@ export function AboutEducation() {
   return (
     <>
       <div className="flex justify-center mb-4">
-        <HeadingTwo>Education</HeadingTwo>
+        <HeadingTwo>My Education</HeadingTwo>
       </div>
 
-      <div className="flex flex-col mb-24">
-        <div className="flex flex-col items-center w-full mb-12">
+      <div className="flex flex-col mb-12 md:mb-16 lg:mb-24">
+        <div className="flex flex-col items-center w-2/3 sm:w-full mx-auto mb-8 md:mb-12">
           <Image
             src="/images/about/soton.svg"
             alt="University of Southampton"
@@ -34,9 +34,12 @@ export function AboutEducation() {
             height={160}
           />
           <HeadingFour>2016 - 2020</HeadingFour>
-          <HeadingFour>
-            Masters of Engineering in Computer Science - 1st Class with Honours
-          </HeadingFour>
+          <div className="mt-4 text-center">
+            <HeadingFour>
+              Masters of Engineering in Computer Science - 1st Class with
+              Honours
+            </HeadingFour>
+          </div>
         </div>
 
         <HeadingThree>Top Module Scores</HeadingThree>
