@@ -10,6 +10,8 @@ import { HomeProjects } from "../components/home/HomeProjects";
 // https://www.youtube.com/watch?v=GSPUUN4nDGE
 
 // Add background image / svgs, minimal but there
+// project links with each heading
+// x minute read based on word count
 
 type HomeProps = {
   projects: Project[];

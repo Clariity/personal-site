@@ -1,4 +1,9 @@
 import { getStaticProps as staticProps } from "../../functions/helpers";
+import { HeadingTwo } from "../../components/utils/HeadingTwo";
+import { HeadingThree } from "../../components/utils/HeadingThree";
+import { ImageWithLabel } from "../../components/utils/ImageWithLabel";
+import { InlineLinkText } from "../../components/utils/InlineLinkText";
+import { Paragraph } from "../../components/utils/Paragraph";
 import { ProjectWrapper } from "../../components/projects/ProjectWrapper";
 
 export const meta = {
@@ -7,11 +12,45 @@ export const meta = {
     "An NPM package to display a chessboard, and drag and drop and its pieces in React.",
   date: "2022-08-07",
   tags: ["Chess", "NPM"],
+  headings: ["What is react-chessboard?", "Open source", "The future"],
 };
 
-# react-chessboard
+export const chessboardURL = "https://github.com/Clariity/react-chessboard";
 
-this is a test post
+<HeadingTwo>What is react-chessboard?</HeadingTwo>
+
+<Paragraph>
+  <InlineLinkText href={chessboardURL}>react-chessboard</InlineLinkText>
+  is an NPM package for displaying a playable chessboard in a React application. I decided
+  to make it when I realised that I needed some extra functionality for the board in my chessopenings.co.uk
+  project but the package I was using for that was no longer maintained.
+</Paragraph>
+
+<Paragraph>
+  This package allows you to drag and drop pieces around the board and provides many
+  customisable properties to allow users to use it how they wish.
+</Paragraph>
+
+<HeadingTwo>Open source</HeadingTwo>
+
+<Paragraph>
+  The react-chessboard project is open source already had over 10 contributors at the time
+  of writing this. It has been downloaded over 14,000 times in the last year and has over
+  90 stars and 40 forks on GitHub.
+</Paragraph>
+
+<Paragraph>
+  My hope is that it can become the go-to package for chessboards in React, it has already
+  massively closed the gap to chessboardjsx and react-chessground.
+</Paragraph>
+
+<HeadingTwo>The future</HeadingTwo>
+
+<Paragraph>
+  At the point of writing this, version 2 is in development. The package has been
+  rewritten in TypeScript with responsive support out the box. Storybook is also being
+  integrated and I plan to add semantic release too.
+</Paragraph>
 
 export default ({ children, projects }) => (
   <ProjectWrapper meta={meta} projects={projects}>
