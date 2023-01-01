@@ -13,8 +13,8 @@ type ProjectCardProps = {
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link href={`projects/${project.id}`}>
-      <a className="flex flex-col hover:scale-105 hover:z-10 transition-all duration-100 ease-linear">
-        <div className="shadow-lg mb-4">
+      <a className="flex flex-col hover:scale-105 hover:z-10 transition-all duration-100 ease-linear mb-4">
+        <div className="shadow-lg mb-2 md:mb-4">
           <Image
             className="rounded-lg shadow-lg object-cover"
             src={`/images/projects/${project.id}.png`}
@@ -25,9 +25,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
           />
         </div>
 
-        <div className="flex items-center">
+        <div className="flex flex-col md:flex-row md:items-center">
           <HeadingThree>{project.title}</HeadingThree>
-          <div className="mb-2 ml-auto">
+          <div className="mb-2 md:ml-auto">
             <Text>{getFormattedDate(project.date)}</Text>
           </div>
         </div>

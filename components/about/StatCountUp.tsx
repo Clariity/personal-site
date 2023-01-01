@@ -17,7 +17,7 @@ export function StatCountUp({ heading, stat }: StatCountUpProps) {
     >
       <HeadingThree>{heading}</HeadingThree>
       {inView && (
-        <div className="text-5xl p-6">
+        <div className="text-3xl md:text-5xl p-4 md:p-6">
           <CountUp target={stat} />
         </div>
       )}

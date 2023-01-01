@@ -74,7 +74,7 @@ export function Footer() {
               src="/logos/logo.svg"
               alt="initials R and G"
               width={32}
-              height={16}
+              height={18}
             />
           </div>
           <p className="pl-2">ryangregory.dev</p>

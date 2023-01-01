@@ -10,10 +10,6 @@ export default function Document() {
           rel="stylesheet"
         />
         <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css"
-        />
-        <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
           rel="stylesheet"
         />

@@ -1,5 +1,4 @@
 import { getStaticProps as staticProps } from "../../functions/helpers";
-import { HeadingOne } from "../../components/utils/HeadingOne";
 import { HeadingTwo } from "../../components/utils/HeadingTwo";
 import { InlineLinkText } from "../../components/utils/InlineLinkText";
 import { Paragraph } from "../../components/utils/Paragraph";
@@ -36,11 +35,13 @@ export const meta = {
   visitors from across the world.
 </Paragraph>
 
-<img
-  src="/images/projects/designrant-home.png"
-  alt="design rant home"
-  className="shadow-lg mb-12 w-full"
-/>
+<div className="px-2">
+  <img
+    src="/images/projects/designrant-home.png"
+    alt="design rant home"
+    className="shadow-lg mb-12 w-full"
+  />
+</div>
 
 <HeadingTwo>What did I do?</HeadingTwo>
 
@@ -59,11 +60,13 @@ export const meta = {
 
 <Paragraph>In total I have made 17 commits to this project.</Paragraph>
 
-<img
-  src="/images/projects/designrant-stats.png"
-  alt="design rant stats"
-  className="shadow-lg mb-12 w-full"
-/>
+<div className="px-2">
+  <img
+    src="/images/projects/designrant-stats.png"
+    alt="design rant stats"
+    className="shadow-lg mb-12 w-full"
+  />
+</div>
 
 <HeadingTwo>What did I learn?</HeadingTwo>
 

@@ -1,5 +1,9 @@
 import { getStaticProps as staticProps } from "../../functions/helpers";
-import { HeadingOne } from "../../components/utils/HeadingOne";
+import { HeadingTwo } from "../../components/utils/HeadingTwo";
+import { HeadingThree } from "../../components/utils/HeadingThree";
+import { ImageWithLabel } from "../../components/utils/ImageWithLabel";
+import { InlineLinkText } from "../../components/utils/InlineLinkText";
+import { Paragraph } from "../../components/utils/Paragraph";
 import { ProjectWrapper } from "../../components/projects/ProjectWrapper";
 
 export const meta = {
@@ -8,11 +12,143 @@ export const meta = {
     "A free Chess website to learn Chess openings and train your Chess openings knowledge. Powered by crowd sourcing.",
   date: "2022-09-24",
   tags: ["Chess", "Website"],
+  headings: [
+    "What is ChessOpenings.co.uk?",
+    "How does it work?",
+    "Tech used",
+    "Core features",
+    "Additional features and future plans",
+  ],
 };
 
-<HeadingOne>ChessOpenings.co.uk</HeadingOne>
+<HeadingTwo>What is ChessOpenings.co.uk?</HeadingTwo>
 
-this is a test post
+<Paragraph>
+  <InlineLinkText href="https://chessopenings.co.uk">ChessOpenings.co.uk</InlineLinkText>
+  was a project I started in 2021 with the aim of creating a free website where users could
+  learn Chess openings such as The Italian Game or The Queen's Gambit. This was motivated by
+  my desire to learn more Chess opening theory but I could not find a place to easily learn
+  all the different variations, or practise them easily enough so that they could become muscle
+  memory. The intention of this site was to fill that gap.
+</Paragraph>
+
+<Paragraph>
+  The site has been developed through many iterations and has slowly grown in both
+  functionality and content. At the point of writing this article, the site has over 100+
+  openings and traps to learn and train, and over 12,000 page views. It is also what led
+  to the development of my
+  <InlineLinkText href="/projects/react-chessboard">react-chessboard</InlineLinkText> and react-chessboard-svg
+  npm packages.
+</Paragraph>
+
+<HeadingTwo>How does it work?</HeadingTwo>
+
+<Paragraph>
+  The core concept of the site is crowd sourcing openings. For example, I knew some
+  opening theory for The Italian Game so I added those opening variations to the site
+  myself. However other users knew theory about other openings and used the contribution
+  tooling on the site to submit opening variations to be added to the site.
+</Paragraph>
+
+<Paragraph>
+  Once submitted, a Discord webhook is fired to notify me of a submission. I can then
+  review the submission and check it against a chess engine to verify it; leave any
+  comments; and then accept or close the submission. Once accepted it will immediately be
+  live for other users to learn.
+</Paragraph>
+
+<HeadingTwo>Tech used</HeadingTwo>
+<div className="flex gap-2 w-full text-center mb-4">
+  <ImageWithLabel label={"React"} />
+  <ImageWithLabel label={"Next"} />
+  <ImageWithLabel label={"Tailwind"} />
+  <ImageWithLabel label={"Firebase"} />
+</div>
+
+<HeadingTwo>Core features</HeadingTwo>
+
+<HeadingThree>Learn</HeadingThree>
+<Paragraph>
+  Here users select the opening they want to learn and are taken to a page displaying the
+  board they will learn on, along with a list of all the variations stored for that
+  opening. The users can then select an opening variation which will reveal the moves for
+  that variation along with a short description. The users can play though the variation
+  on the board with the computer playing the opposing colour's moves. Squares will be
+  highlighted to help you learn what moves to make, though this can be turned off to
+  challenge yourself more whilst learning.
+</Paragraph>
+
+<div className="px-2">
+  <img
+    src="/images/projects/chessopenings-learn.png"
+    alt="chess openings learn"
+    className="shadow-lg mb-12 w-full"
+  />
+</div>
+
+<Paragraph>
+  The point of this section is to make it easy to learn specific theory moves, over and
+  over, as either the black or white pieces, in order to make it easier to remember the
+  opening theory. When a user feels confident that they have learned a variation, they can
+  then test their knowledge in the train section of the site.
+</Paragraph>
+
+<HeadingThree>Train</HeadingThree>
+<Paragraph>
+  Here users search for and select openings they want to test their knowledge on. Once
+  they have selected the variations to test, it will start automatically cycling through
+  the openings and the user must make the moves against the computer correctly based on
+  the opening variation shown. No hints will be shown to the user, they must rely on their
+  memory and what they learnt in the learn section of the site.
+</Paragraph>
+
+<HeadingThree>Traps</HeadingThree>
+<Paragraph>
+  This section is very similar to the learn section of the site, except instead of
+  learning computer backed theory, they are learning opening traps. This is where one side
+  tries to trick the other into making a mistake and then capitalises on it to gain a
+  winning position.
+</Paragraph>
+
+<div className="px-2">
+  <img
+    src="/images/projects/chessopenings-traps.png"
+    alt="chess openings traps"
+    className="shadow-lg mb-12 w-full"
+  />
+</div>
+
+<HeadingTwo>Additional features and future plans</HeadingTwo>
+
+<HeadingThree>User accounts and achievements</HeadingThree>
+<Paragraph>
+  User accounts were added so that users can log in and track their progress as they learn
+  more openings and variations. By tracking this information it enabled me to set up a
+  progress system where users can see how well they know each opening. I also gamified it
+  by adding different levels of progress so that users can work their way up the leagues.
+</Paragraph>
+
+<div className="px-2">
+  <img
+    src="/images/projects/chessopenings-stats.png"
+    alt="chess openings stats"
+    className="shadow-lg mb-12 w-full"
+  />
+</div>
+
+<HeadingThree>Light and dark theme</HeadingThree>
+<Paragraph>
+  Themes were added that default to the user's system preferences so that the user can
+  better customise the site to their preference. This also opened up the possibility for
+  adding more customisation in the future.
+</Paragraph>
+
+<HeadingThree>Plans for the future</HeadingThree>
+<Paragraph>
+  There is a massive scope for this project with so much potential to do a lot with it.
+  There's a chance it could be monetised in the future if a big push was done for it but
+  it would requite a lot for features to be added before considering it properly.
+</Paragraph>
 
 export default ({ children, projects }) => (
   <ProjectWrapper meta={meta} projects={projects}>

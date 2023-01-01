@@ -81,13 +81,15 @@ export function AboutStats({ githubStats }: AboutStatsProps) {
         <HeadingTwo>GitHub Stats</HeadingTwo>
       </div>
 
-      <div className="grid gap-3 md:gap-6 xl:gap-8 grid-cols-1 md:grid-cols-3 mb-3 md:mb-6 xl:mb-8">
+      <div className="grid gap-3 md:gap-6 xl:gap-8 grid-cols-2 md:grid-cols-3 mb-3 md:mb-6 xl:mb-8">
         <StatCountUp heading="Repositories" stat={totalRepos} />
         <StatCountUp heading="Stargazers" stat={totalStars} />
-        <StatCountUp heading="Times Forked" stat={totalForks} />
+        <div className="col-span-2 md:col-span-1">
+          <StatCountUp heading="Times Forked" stat={totalForks} />
+        </div>
       </div>
 
-      <div className="grid gap-3 md:gap-6 xl:gap-8 grid-cols-1 md:grid-cols-2 mb-24">
+      <div className="grid gap-3 md:gap-6 xl:gap-8 grid-cols-1 md:grid-cols-2 mb-12 md:mb-16 lg:mb-24">
         <div className="flex flex-col items-center border-4 border-primary rounded-lg p-4 shadow-lg">
           <HeadingThree>Top Repositories</HeadingThree>
 

@@ -17,7 +17,7 @@ export function Navbar() {
               src="/logos/logo.svg"
               alt="initials R and G"
               width={90}
-              height={50}
+              height={52}
             />
           </a>
         </Link>

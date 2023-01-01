@@ -9,11 +9,9 @@ export function HomeAbout() {
     jobDif + 12 * (new Date().getFullYear() - jobStart.getFullYear());
 
   return (
-    <div className="grid gap-3 md:gap-8 grid-cols-1 md:grid-cols-2 mb-12">
+    <div className="grid gap-3 md:gap-8 grid-cols-2 mb-4 md:mb-8 lg:mb-12">
       <div className="flex flex-col items-center border-4 border-primary rounded-lg p-4 shadow-lg">
-        <div className="h-1/4">
-          <HeadingTwo>Current Role</HeadingTwo>
-        </div>
+        <HeadingTwo>Current Role</HeadingTwo>
         <div className="flex justify-center items-center h-1/2 w-full">
           <img
             className="max-w-[256px] w-full py-4"
@@ -21,15 +19,13 @@ export function HomeAbout() {
             alt="Checkout.com"
           />
         </div>
-        <div className="flex items-center h-1/4 text-center">
+        <div className="flex items-center md:mt-4 text-center">
           <Text>Front End Engineer II - {monthsAtJob} months</Text>
         </div>
       </div>
 
       <div className="flex flex-col items-center border-4 border-primary rounded-lg p-4 shadow-lg">
-        <div className="h-1/4">
-          <HeadingTwo>Education</HeadingTwo>
-        </div>
+        <HeadingTwo>Education</HeadingTwo>
         <div className="flex justify-center items-center h-1/2 w-full">
           <img
             className="max-w-[256px] w-full py-4"
@@ -37,7 +33,7 @@ export function HomeAbout() {
             alt="University of Southampton"
           />
         </div>
-        <div className="flex items-center h-1/4 text-center">
+        <div className="flex items-center md:mt-4 text-center">
           <Text>MEng Computer Science - 1st with Honours</Text>
         </div>
       </div>

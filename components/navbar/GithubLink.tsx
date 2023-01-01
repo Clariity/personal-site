@@ -3,7 +3,6 @@ export function GithubLink() {
     <svg
       viewBox="0 0 250 250"
       className="github-corner-svg github-corner -rotate-45 translate-y-3 sm:translate-y-4"
-      aria-hidden="true"
     >
       <a
         href="https://github.com/Clariity/personal-site"

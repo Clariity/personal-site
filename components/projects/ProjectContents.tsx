@@ -25,9 +25,9 @@ export function ProjectContents({ meta }: ProjectContentsProps) {
         </div>
       </div>
 
-      <div className="flex flex-col border-4 border-primary p-4 mr-8 rounded-lg shadow-lg">
+      <div className="flex flex-col border-4 border-primary p-4 mr-8 rounded-lg shadow-lg overflow-x-hidden">
         <Text>Table of contents</Text>
-        <ol className="flex flex-col list-decimal ml-4 lg:ml-8">
+        <ol className="flex flex-col list-decimal mt-2 ml-4 lg:ml-8">
           {meta.headings?.map((h) => (
             <li key={h} className="mr-auto">
               <LinkText

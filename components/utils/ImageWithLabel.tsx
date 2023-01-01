@@ -8,7 +8,7 @@ type ImageWithLabelProps = {
 
 export function ImageWithLabel({ label }: ImageWithLabelProps) {
   return (
-    <div className="flex flex-col gap-2 justify-center">
+    <div className="flex flex-col gap-2 justify-center items-center w-10 sm:w-16 mx-auto">
       <Image
         src={`/icons/${label.toLowerCase()}.svg`}
         alt={label}
