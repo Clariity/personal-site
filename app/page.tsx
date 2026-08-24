@@ -1,48 +1,15 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import { CompanyList } from "./company-list";
+
+import { CompanyList } from "@/components/CompanyList";
+import { NewTabIcon } from "@/components/NewTabIcon";
 import { BORN_AT, companies, projects } from "@/constants";
+import { formatRange, formatTenure, getAge } from "@/utils/date";
 
 export const metadata: Metadata = {
   title: "home · Ryan Gregory",
   description: "Personal website of Ryan Gregory",
 };
-
-function getAge(born: Date) {
-  const now = new Date();
-  let age = now.getFullYear() - born.getFullYear();
-  const anniversaryThisYear = new Date(
-    now.getFullYear(),
-    born.getMonth(),
-    born.getDate(),
-    born.getHours(),
-    born.getMinutes(),
-  );
-  if (now < anniversaryThisYear) age -= 1;
-  return age;
-}
-
-function formatTenure(start: Date, end: Date | null) {
-  const to = end ?? new Date();
-  let months =
-    (to.getFullYear() - start.getFullYear()) * 12 + (to.getMonth() - start.getMonth());
-  if (to.getDate() < start.getDate()) months -= 1;
-
-  const years = Math.floor(months / 12);
-  const remainingMonths = months % 12;
-  const parts = [
-    years ? `${years} year${years === 1 ? "" : "s"}` : "",
-    remainingMonths ? `${remainingMonths} month${remainingMonths === 1 ? "" : "s"}` : "",
-  ].filter(Boolean);
-
-  return parts.join(" ") || "1 month";
-}
-
-function formatRange(start: Date, end: Date | null) {
-  const monthYear = (date: Date) =>
-    date.toLocaleDateString("en-GB", { month: "short", year: "numeric" });
-  return `${monthYear(start)} – ${end ? monthYear(end) : "Present"}`;
-}
 
 export default function Home() {
   return (
@@ -80,7 +47,7 @@ export default function Home() {
       </div>
 
       <h2 className="text-2xl lg:text-3xl font-bold mb-3">Projects</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
         {projects.map((project) => (
           <div key={project.title} className="flex flex-col">
             <Image
@@ -101,24 +68,14 @@ export default function Home() {
               className="mt-auto border rounded-sm px-2 py-1 w-fit flex gap-2 items-center hover:shadow hover:shadow-white"
             >
               View
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                className="size-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
+              <NewTabIcon />
             </a>
           </div>
         ))}
       </div>
+
+      <h2 className="text-2xl lg:text-3xl font-bold mb-3">Stats</h2>
+      <p>COMING SOON (Probably)</p>
     </main>
   );
 }

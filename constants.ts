@@ -10,7 +10,7 @@ export const companies = [
     start: new Date(2024, 2, 1),
     end: null,
     description:
-      "Building product for a global digital health platform spanning clinicians, pharmacies, and consumer brands.",
+      "Spearheaded the development of the front-end platform as the company scaled from turning over £50m+, to £1b+. Created the company Design System and progressed from building frontend platform foundations to shaping organisation-wide engineering strategy and developer experience.",
   },
   {
     name: "Checkout.com",
@@ -21,7 +21,7 @@ export const companies = [
     start: new Date(2022, 6, 1),
     end: new Date(2024, 2, 1),
     description:
-      "Developer Enablement team. Shipped large features, up to 10x performance improvements, and introduced coding standards and technologies across the frontend platform.",
+      "Started as a member of the Developer Enablement team before working on a greenfield Product Catalogue project. Shipped large features DX features for customers, improving performance by 10x, and introduced coding standards and technologies across the frontend platform.",
   },
   {
     name: "American Express",
@@ -32,7 +32,7 @@ export const companies = [
     start: new Date(2020, 8, 1),
     end: new Date(2022, 6, 1),
     description:
-      "Started as a graduate engineer. Built a proof of concept application that sped up creating card products and benefits by 10x, then moved project into production, turning it into a product configuration UI that went processed over 10,000 product updates and creations across multiple environments.",
+      "Started as a graduate engineer. Built a PoC application that sped up creating card products and benefits by 10x, then moved the project into production, turning it into a product configuration UI that went processed over 10,000 product updates and creations across multiple environments.",
   },
 ];
 
