@@ -35,6 +35,10 @@ export function DownloadsChart({ data }: { data: WeeklyDownloads[] }) {
     <ChartContainer
       config={chartConfig}
       className="aspect-auto h-60 w-full min-h-50"
+      // Recharts default. shadcn's 320px placeholder starts the stroke
+      // animation at the wrong width; the resize leaves the dash pattern
+      // on the old path (gaps / a second fragment) until t=1 flashes complete.
+      initialDimension={{ width: -1, height: -1 }}
     >
       <LineChart
         accessibilityLayer
@@ -84,11 +88,10 @@ export function DownloadsChart({ data }: { data: WeeklyDownloads[] }) {
         />
         <Line
           dataKey="downloads"
-          type="linear"
+          type="natural"
           stroke="var(--color-downloads)"
           strokeWidth={2}
           dot={false}
-          isAnimationActive={false}
         />
       </LineChart>
     </ChartContainer>
