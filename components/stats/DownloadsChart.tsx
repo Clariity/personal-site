@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 
 import {
@@ -39,27 +39,28 @@ export function DownloadsChart({ data }: { data: WeeklyDownloads[] }) {
   const frameRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState<ChartSize | null>(null);
 
-  // Wait for a real box so the stroke animation starts at the final width.
-  // shadcn's 320px placeholder (or Recharts' -1) either glitches the dash
-  // pattern or logs a width/height warning.
-  useLayoutEffect(() => {
+  // Mount only once in view, with a real box. That keeps the stroke
+  // animation on-screen and avoids shadcn's 320px placeholder / Recharts -1.
+  useEffect(() => {
     const frame = frameRef.current;
     if (!frame) {
       return;
     }
 
-    const applySize = (width: number, height: number) => {
-      if (width > 0 && height > 0) {
-        setSize((current) => current ?? { width, height });
-      }
-    };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
 
-    const { width, height } = frame.getBoundingClientRect();
-    applySize(width, height);
-
-    const observer = new ResizeObserver(([entry]) => {
-      applySize(entry.contentRect.width, entry.contentRect.height);
-    });
+        const { width, height } = frame.getBoundingClientRect();
+        if (width > 0 && height > 0) {
+          setSize({ width, height });
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.35 },
+    );
     observer.observe(frame);
 
     return () => observer.disconnect();
