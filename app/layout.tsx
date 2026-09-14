@@ -36,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         <div className="flex gap-2 justify-between my-2 text-sm">
           <p>Ryan Gregory</p>
-          <p>Last updated: August 2026</p>
+          <p>Last updated: {process.env.BUILD_MONTH_YEAR}</p>
         </div>
       </body>
     </html>
