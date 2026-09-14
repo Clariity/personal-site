@@ -1,5 +1,6 @@
 "use client";
 
+import { useLayoutEffect, useRef, useState } from "react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 
 import {
@@ -27,73 +28,107 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
+type ChartSize = {
+  width: number;
+  height: number;
+};
+
 /** Weekly downloads line chart with a presentational trend overlay. */
 export function DownloadsChart({ data }: { data: WeeklyDownloads[] }) {
   const chartData = withTrend(data);
+  const frameRef = useRef<HTMLDivElement>(null);
+  const [size, setSize] = useState<ChartSize | null>(null);
+
+  // Wait for a real box so the stroke animation starts at the final width.
+  // shadcn's 320px placeholder (or Recharts' -1) either glitches the dash
+  // pattern or logs a width/height warning.
+  useLayoutEffect(() => {
+    const frame = frameRef.current;
+    if (!frame) {
+      return;
+    }
+
+    const applySize = (width: number, height: number) => {
+      if (width > 0 && height > 0) {
+        setSize((current) => current ?? { width, height });
+      }
+    };
+
+    const { width, height } = frame.getBoundingClientRect();
+    applySize(width, height);
+
+    const observer = new ResizeObserver(([entry]) => {
+      applySize(entry.contentRect.width, entry.contentRect.height);
+    });
+    observer.observe(frame);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <ChartContainer
-      config={chartConfig}
-      className="aspect-auto h-60 w-full min-h-50"
-      // Recharts default. shadcn's 320px placeholder starts the stroke
-      // animation at the wrong width; the resize leaves the dash pattern
-      // on the old path (gaps / a second fragment) until t=1 flashes complete.
-      initialDimension={{ width: -1, height: -1 }}
-    >
-      <LineChart
-        accessibilityLayer
-        data={chartData}
-        margin={{ left: 8, right: 12, top: 8 }}
-      >
-        <CartesianGrid vertical={false} />
-        <XAxis
-          dataKey="week"
-          tickLine={false}
-          axisLine={false}
-          tickMargin={8}
-          minTickGap={28}
-          tickFormatter={formatWeekLabel}
-        />
-        <YAxis
-          tickLine={false}
-          axisLine={false}
-          tickMargin={8}
-          width={40}
-          tickFormatter={formatAxisValue}
-        />
-        <ChartTooltip
-          cursor={false}
-          content={
-            <ChartTooltipContent
-              indicator="line"
-              labelFormatter={(_, payload) => {
-                const week = payload[0]?.payload?.week;
-                return typeof week === "string" ? formatWeekRange(week) : "";
-              }}
+    <div ref={frameRef} className="h-60 w-full min-h-50">
+      {size ? (
+        <ChartContainer
+          config={chartConfig}
+          className="aspect-auto h-full w-full"
+          initialDimension={size}
+        >
+          <LineChart
+            accessibilityLayer
+            data={chartData}
+            margin={{ left: 8, right: 12, top: 8 }}
+          >
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="week"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              minTickGap={28}
+              tickFormatter={formatWeekLabel}
             />
-          }
-        />
-        {/* Trend is visual-only: hidden from tooltip and legend. */}
-        <Line
-          dataKey="trend"
-          type="linear"
-          stroke="var(--color-trend)"
-          strokeWidth={1.5}
-          strokeDasharray="5 5"
-          dot={false}
-          activeDot={false}
-          legendType="none"
-          tooltipType="none"
-          isAnimationActive={false}
-        />
-        <Line
-          dataKey="downloads"
-          type="natural"
-          stroke="var(--color-downloads)"
-          strokeWidth={2}
-          dot={false}
-        />
-      </LineChart>
-    </ChartContainer>
+            <YAxis
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              width={40}
+              tickFormatter={formatAxisValue}
+            />
+            <ChartTooltip
+              cursor={false}
+              content={
+                <ChartTooltipContent
+                  indicator="line"
+                  labelFormatter={(_, payload) => {
+                    const week = payload[0]?.payload?.week;
+                    return typeof week === "string" ? formatWeekRange(week) : "";
+                  }}
+                />
+              }
+            />
+            {/* Trend is visual-only: hidden from tooltip and legend. */}
+            <Line
+              dataKey="trend"
+              type="linear"
+              stroke="var(--color-trend)"
+              strokeWidth={1.5}
+              strokeDasharray="5 5"
+              dot={false}
+              activeDot={false}
+              legendType="none"
+              tooltipType="none"
+              isAnimationActive={false}
+            />
+            <Line
+              dataKey="downloads"
+              type="natural"
+              stroke="var(--color-downloads)"
+              strokeWidth={2}
+              dot={false}
+            />
+          </LineChart>
+        </ChartContainer>
+      ) : null}
+    </div>
   );
 }

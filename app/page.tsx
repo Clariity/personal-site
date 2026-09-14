@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { Suspense } from "react";
 
-import { AboutDetails } from "@/components/home/AboutDetails";
+import { AboutDetails, AboutDetailsSkeleton } from "@/components/home/AboutDetails";
 import { ProjectCard } from "@/components/home/ProjectCard";
 import { PackageStats } from "@/components/stats/PackageStats";
 import { SiteViews } from "@/components/stats/SiteViews";
@@ -32,7 +32,7 @@ export default function Home() {
       </p>
 
       <h2 className="text-2xl lg:text-3xl font-bold mb-3">About</h2>
-      <Suspense fallback={<div className="mb-10 h-20 bg-muted/40 rounded-sm" />}>
+      <Suspense fallback={<AboutDetailsSkeleton />}>
         <AboutDetails />
       </Suspense>
 
