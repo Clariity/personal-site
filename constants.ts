@@ -36,6 +36,14 @@ export const companies = [
   },
 ];
 
+export const reactChessboard = {
+  name: "react-chessboard",
+  npmUrl: "https://www.npmjs.com/package/react-chessboard",
+  githubRepo: "Clariity/react-chessboard",
+  githubUrl: "https://github.com/Clariity/react-chessboard",
+  publishedAt: "2021-08-25",
+};
+
 export const projects = [
   {
     imgPath: "/tiles/pics.png",

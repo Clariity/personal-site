@@ -1,10 +1,13 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { Suspense } from "react";
 
-import { CompanyList } from "@/components/CompanyList";
-import { NewTabIcon } from "@/components/NewTabIcon";
-import { BORN_AT, companies, projects } from "@/constants";
-import { formatRange, formatTenure, getAge } from "@/utils/date";
+import { AboutDetails } from "@/components/home/AboutDetails";
+import { ProjectCard } from "@/components/home/ProjectCard";
+import { PackageStats } from "@/components/stats/PackageStats";
+import { SiteViews } from "@/components/stats/SiteViews";
+import { PackageStatsSkeleton, SiteViewsSkeleton } from "@/components/stats/StatsSkeleton";
+import { projects } from "@/constants";
 
 export const metadata: Metadata = {
   title: "home · Ryan Gregory",
@@ -29,53 +32,27 @@ export default function Home() {
       </p>
 
       <h2 className="text-2xl lg:text-3xl font-bold mb-3">About</h2>
-      <div className="mb-10">
-        <p className="text-sm lg:text-base mb-4">{getAge(BORN_AT)} · Glasgow, Scotland</p>
-
-        <CompanyList
-          companies={companies.map((company) => ({
-            name: company.name,
-            logo: company.logo,
-            logoWidth: company.logoWidth,
-            logoHeight: company.logoHeight,
-            title: company.title,
-            range: formatRange(company.start, company.end),
-            tenure: formatTenure(company.start, company.end),
-            description: company.description,
-          }))}
-        />
-      </div>
+      <Suspense fallback={<div className="mb-10 h-20 bg-muted/40 rounded-sm" />}>
+        <AboutDetails />
+      </Suspense>
 
       <h2 className="text-2xl lg:text-3xl font-bold mb-3">Projects</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
         {projects.map((project) => (
-          <div key={project.title} className="flex flex-col">
-            <Image
-              src={project.imgPath}
-              alt={project.title}
-              width={696}
-              height={296.967}
-              className="rounded-sm aspect-1200/512 object-cover mb-2"
-              loading="eager"
-            />
-
-            <h2 className="text-xl lg:text-2xl font-bold mb-1">{project.title}</h2>
-            <p className="text-sm lg:text-base mb-2">{project.description}</p>
-
-            <a
-              href={project.link}
-              target="_blank"
-              className="mt-auto border rounded-sm px-2 py-1 w-fit flex gap-2 items-center hover:shadow hover:shadow-white"
-            >
-              View
-              <NewTabIcon />
-            </a>
-          </div>
+          <ProjectCard key={project.title} {...project} />
         ))}
       </div>
 
       <h2 className="text-2xl lg:text-3xl font-bold mb-3">Stats</h2>
-      <p>COMING SOON (Probably)</p>
+      <div className="flex flex-col gap-8">
+        <Suspense fallback={<SiteViewsSkeleton />}>
+          <SiteViews />
+        </Suspense>
+
+        <Suspense fallback={<PackageStatsSkeleton />}>
+          <PackageStats />
+        </Suspense>
+      </div>
     </main>
   );
 }
